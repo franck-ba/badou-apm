@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 
 type FormValues = {
   name: string;
@@ -35,6 +35,11 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [submissionError, setSubmissionError] = useState("");
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const conversationTypeRef = useRef<HTMLSelectElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+  const consentRef = useRef<HTMLInputElement>(null);
 
   function validateForm() {
     const nextErrors: FormErrors = {};
@@ -75,6 +80,15 @@ export default function ContactForm() {
     setErrors(nextErrors);
 
     if (Object.keys(nextErrors).length > 0) {
+      const firstInvalidField = [
+        { error: nextErrors.name, ref: nameRef },
+        { error: nextErrors.email, ref: emailRef },
+        { error: nextErrors.conversationType, ref: conversationTypeRef },
+        { error: nextErrors.message, ref: messageRef },
+        { error: nextErrors.consent, ref: consentRef },
+      ].find(({ error }) => Boolean(error));
+
+      firstInvalidField?.ref.current?.focus();
       return;
     }
 
@@ -157,8 +171,10 @@ export default function ContactForm() {
             className={fieldClassName}
             id="name"
             name="name"
+            ref={nameRef}
             type="text"
             autoComplete="name"
+            maxLength={120}
             required
             value={values.name}
             onChange={(event) =>
@@ -185,8 +201,10 @@ export default function ContactForm() {
             className={fieldClassName}
             id="email"
             name="email"
+            ref={emailRef}
             type="email"
             autoComplete="email"
+            maxLength={254}
             required
             value={values.email}
             onChange={(event) =>
@@ -216,6 +234,7 @@ export default function ContactForm() {
           name="phone"
           type="tel"
           autoComplete="tel"
+          maxLength={40}
           value={values.phone ?? ""}
           onChange={(event) =>
             setValues({ ...values, phone: event.target.value })
@@ -236,6 +255,7 @@ export default function ContactForm() {
           name="organization"
           type="text"
           autoComplete="organization"
+          maxLength={160}
           value={values.organization}
           onChange={(event) =>
             setValues({ ...values, organization: event.target.value })
@@ -254,6 +274,7 @@ export default function ContactForm() {
           className={fieldClassName}
           id="conversation-type"
           name="conversationType"
+          ref={conversationTypeRef}
           required
           value={values.conversationType}
           onChange={(event) =>
@@ -298,17 +319,21 @@ export default function ContactForm() {
           className={`${fieldClassName} min-h-36 resize-y`}
           id="message"
           name="message"
+          ref={messageRef}
           required
           minLength={20}
+          maxLength={5000}
           value={values.message}
           onChange={(event) =>
             setValues({ ...values, message: event.target.value })
           }
           aria-invalid={Boolean(errors.message)}
-          aria-describedby="message-help message-error"
+          aria-describedby={
+            errors.message ? "message-help message-error" : "message-help"
+          }
         />
         <p id="message-help" className="mt-2 text-sm text-slate-500">
-          Share the challenge, context, and desired outcome. Minimum 20
+          Share the challenge, context, and desired outcome. 20–5,000
           characters.
         </p>
         {errors.message && (
@@ -329,6 +354,7 @@ export default function ContactForm() {
           type="text"
           tabIndex={-1}
           autoComplete="off"
+          maxLength={200}
           value={values.botcheck}
           onChange={(event) =>
             setValues({ ...values, botcheck: event.target.value })
@@ -341,6 +367,7 @@ export default function ContactForm() {
           <input
             className="mt-1 h-4 w-4 shrink-0 accent-sky-400 outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-slate-950"
             name="consent"
+            ref={consentRef}
             type="checkbox"
             required
             checked={values.consent}

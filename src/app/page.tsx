@@ -145,7 +145,7 @@ function BusinessAnalystVisual() {
 
   return (
     <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
-      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
             <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
@@ -232,7 +232,7 @@ function ProjectManagerVisual() {
 
   return (
     <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
-      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
             <div className="rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
@@ -327,7 +327,7 @@ function ProgramManagerVisual() {
 
   return (
     <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
-      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
             <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
@@ -418,7 +418,7 @@ function PortfolioManagerVisual() {
 
   return (
     <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
-      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
             <div className="rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
@@ -517,7 +517,7 @@ function FounderVisual() {
 
   return (
     <div className="mt-12 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-950/80">
-      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
             <div className="rounded-xl border border-sky-300/15 bg-slate-900/70 p-5">
@@ -620,7 +620,7 @@ export default function Home() {
         </p>
 
         <h1 className="mt-8 max-w-5xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-          18 years mastering how the work gets done. Now rebuilding it with AI.
+          20 years mastering how the work gets done. Now rebuilding it with AI.
         </h1>
 
         <p className="mt-8 max-w-2xl text-xl leading-8 text-slate-300 sm:text-2xl">
@@ -685,7 +685,7 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
             <div>
               <p className="text-sm font-medium text-sky-300">01</p>
 
@@ -742,8 +742,8 @@ export default function Home() {
                     </h3>
                   </div>
 
-                  <div className="grid md:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r">
+                  <div className="grid xl:grid-cols-2">
+                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                       <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
                         Pre-AI
                       </p>
@@ -786,7 +786,7 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
             <div>
               <p className="text-sm font-medium text-sky-300">02</p>
 
@@ -846,8 +846,8 @@ export default function Home() {
                     </h3>
                   </div>
 
-                  <div className="grid md:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r">
+                  <div className="grid xl:grid-cols-2">
+                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                       <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
                         Pre-AI
                       </p>
@@ -889,7 +889,7 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
             <div>
               <p className="text-sm font-medium text-sky-300">03</p>
 
@@ -944,8 +944,8 @@ export default function Home() {
                     </h3>
                   </div>
 
-                  <div className="grid md:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r">
+                  <div className="grid xl:grid-cols-2">
+                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                       <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
                         Pre-AI
                       </p>
@@ -988,7 +988,7 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
             <div>
               <p className="text-sm font-medium text-sky-300">04</p>
 
@@ -1045,8 +1045,8 @@ export default function Home() {
                     </h3>
                   </div>
 
-                  <div className="grid md:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r">
+                  <div className="grid xl:grid-cols-2">
+                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                       <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
                         Pre-AI
                       </p>
@@ -1198,7 +1198,7 @@ export default function Home() {
             human responsibility rises with the stakes.
           </p>
 
-          <div className="mt-12 grid gap-4 md:grid-cols-4 md:items-end">
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:items-end">
             <article className="border-t border-sky-300/25 bg-slate-900/50 p-5 md:min-h-44">
               <p className="text-xs text-sky-300">01</p>
               <h3 className="mt-4 text-lg font-semibold text-white">

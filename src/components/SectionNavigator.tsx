@@ -107,7 +107,7 @@ export default function SectionNavigator() {
           <span className="shrink-0 font-medium text-slate-400">Viewing:</span>
           <select
             id="section-navigator"
-            className="min-w-0 flex-1 rounded-lg border border-white/15 bg-slate-900 px-3 py-2 text-sm font-medium text-white outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-300/25"
+            className="min-h-11 min-w-0 flex-1 rounded-lg border border-white/15 bg-slate-900 px-3 py-2 text-sm font-medium text-white outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-300/25"
             value={activeSection}
             onChange={handleSelectChange}
           >
@@ -122,80 +122,93 @@ export default function SectionNavigator() {
 
       {showDesktopRail && (
         <nav
-          className="fixed left-3 top-1/2 z-40 hidden w-40 -translate-y-1/2 rounded-xl border border-white/10 bg-slate-950/90 p-3 shadow-2xl shadow-slate-950/40 backdrop-blur lg:block xl:left-5"
+          className="group fixed left-0 top-1/2 z-40 hidden w-44 -translate-x-36 -translate-y-1/2 rounded-r-xl border border-l-0 border-white/10 bg-slate-950/90 p-2 shadow-2xl shadow-slate-950/40 backdrop-blur transition-transform duration-200 hover:translate-x-0 focus-within:translate-x-0 motion-reduce:transition-none lg:block"
           aria-label="Page sections"
         >
-        <a
-          href="#top"
-          onClick={(event) => handleLinkClick(event, "top")}
-          className={`flex items-center gap-2 rounded-md px-2 py-2 text-xs transition focus:outline-none focus:ring-2 focus:ring-sky-300/50 ${
-            activeSection === "top"
-              ? "font-semibold text-white"
-              : "text-slate-500 hover:text-slate-200"
-          }`}
-          aria-current={activeSection === "top" ? "location" : undefined}
-        >
-          <span
-            className={`h-1.5 w-1.5 rounded-full ${
-              activeSection === "top" ? "bg-sky-300" : "bg-slate-700"
+          <a
+            href="#top"
+            onClick={(event) => handleLinkClick(event, "top")}
+            className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
+              activeSection === "top"
+                ? "bg-sky-400/10 font-semibold text-white"
+                : "text-slate-500 hover:bg-white/5 hover:text-slate-200"
             }`}
-            aria-hidden="true"
-          />
-          Overview
-        </a>
-
-        <div className="mt-1 border-t border-white/10 pt-1">
-          {roleSections.map((section) => {
-            const isActive = activeSection === section.id;
-
-            return (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                onClick={(event) => handleLinkClick(event, section.id)}
-                className={`flex items-start gap-2 rounded-md border-l-2 px-2 py-2 text-xs leading-4 transition focus:outline-none focus:ring-2 focus:ring-sky-300/50 ${
-                  isActive
-                    ? "border-sky-300 bg-sky-400/10 font-semibold text-white"
-                    : "border-transparent text-slate-500 hover:bg-white/5 hover:text-slate-200"
+            aria-current={activeSection === "top" ? "location" : undefined}
+          >
+            <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+              Overview
+            </span>
+            <span className="flex h-8 items-center justify-center" aria-hidden="true">
+              <span
+                className={`h-1.5 w-1.5 rounded-full ${
+                  activeSection === "top" ? "bg-sky-300" : "bg-slate-700"
                 }`}
-                aria-current={isActive ? "location" : undefined}
-              >
-                <span className="text-sky-300" aria-hidden="true">
-                  {section.number}
-                </span>
-                <span>{section.label}</span>
-              </a>
-            );
-          })}
-        </div>
+              />
+            </span>
+          </a>
 
-        <div className="mt-1 border-t border-sky-300/20 pt-1">
-          {closingSections.map((section) => {
-            const isActive = activeSection === section.id;
+          <div className="mt-1 border-t border-white/10 pt-1">
+            {roleSections.map((section) => {
+              const isActive = activeSection === section.id;
 
-            return (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                onClick={(event) => handleLinkClick(event, section.id)}
-                className={`flex items-center gap-2 rounded-md border-l-2 px-2 py-2 text-xs transition focus:outline-none focus:ring-2 focus:ring-sky-300/50 ${
-                  isActive
-                    ? "border-sky-300 bg-sky-400/10 font-semibold text-white"
-                    : "border-transparent text-slate-500 hover:bg-white/5 hover:text-slate-200"
-                }`}
-                aria-current={isActive ? "location" : undefined}
-              >
-                <span
-                  className={`h-1.5 w-1.5 rounded-full ${
-                    isActive ? "bg-sky-300" : "bg-slate-700"
+              return (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  onClick={(event) => handleLinkClick(event, section.id)}
+                  className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs leading-4 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
+                    isActive
+                      ? "bg-sky-400/10 font-semibold text-white"
+                      : "text-slate-500 hover:bg-white/5 hover:text-slate-200"
                   }`}
-                  aria-hidden="true"
-                />
-                {section.label}
-              </a>
-            );
-          })}
-        </div>
+                  aria-current={isActive ? "location" : undefined}
+                >
+                  <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                    {section.label}
+                  </span>
+                  <span
+                    className={`flex h-8 items-center justify-center border-l-2 text-sky-300 ${
+                      isActive ? "border-sky-300" : "border-transparent"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    {section.number}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+
+          <div className="mt-1 border-t border-sky-300/20 pt-1">
+            {closingSections.map((section) => {
+              const isActive = activeSection === section.id;
+
+              return (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  onClick={(event) => handleLinkClick(event, section.id)}
+                  className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
+                    isActive
+                      ? "bg-sky-400/10 font-semibold text-white"
+                      : "text-slate-500 hover:bg-white/5 hover:text-slate-200"
+                  }`}
+                  aria-current={isActive ? "location" : undefined}
+                >
+                  <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                    {section.label}
+                  </span>
+                  <span className="flex h-8 items-center justify-center" aria-hidden="true">
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full ${
+                        isActive ? "bg-sky-300" : "bg-slate-700"
+                      }`}
+                    />
+                  </span>
+                </a>
+              );
+            })}
+          </div>
         </nav>
       )}
     </>
