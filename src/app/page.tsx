@@ -1,11 +1,5 @@
 const roles = [
   {
-    number: "03",
-    title: "Program Manager",
-    altitude: "Coordinating at scale",
-    leverage: "Coordination",
-  },
-  {
     number: "04",
     title: "Portfolio Manager",
     altitude: "Allocating the investment",
@@ -65,6 +59,30 @@ const projectManagerActivities = [
       "Coordinate onshore and offshore testers and test leads by hand across time zones — allocate work, chase test coverage, reconcile defect reports, and hold the quality bar through a high-stakes migration by sheer vigilance.",
     aiMultiplied:
       "AI drafts test coverage from requirements, clusters and de-duplicates defect reports across distributed teams, summarizes overnight offshore progress for the morning handoff, and flags coverage gaps before a release — so the lead manages exceptions, not spreadsheets.",
+  },
+];
+
+const programManagerActivities = [
+  {
+    title: "Cross-Project Dependency Management",
+    preAi:
+      "Manually map dependencies across dozens of projects, chase project managers for status, reconcile conflicting timelines, and hold the collision map in your head or in a sprawling spreadsheet.",
+    aiMultiplied:
+      "AI ingests every project plan, maps the full dependency network, and flags where a slip in one project cascades into three others — surfacing the collision weeks before it lands.",
+  },
+  {
+    title: "Executive Dashboards & Program Health",
+    preAi:
+      "Pull data from every project, build the Power BI or Smartsheet dashboard by hand, refresh it each cycle, and write the narrative interpretation for SVP leadership.",
+    aiMultiplied:
+      "AI aggregates program data continuously, drafts the health narrative — what is green, what is red, and why — and generates the executive read-out on demand, not once per reporting cycle.",
+  },
+  {
+    title: "Governance & Prioritization Facilitation",
+    preAi:
+      "Prepare governance materials, frame trade-offs for SVP-level sessions, capture decisions live, then manually cascade them back into every affected project.",
+    aiMultiplied:
+      "AI prepares the trade-off analysis and scenario comparisons before the session, captures decisions in real time, and drafts the cascade of updates to each impacted project.",
   },
 ];
 
@@ -228,6 +246,101 @@ function ProjectManagerVisual() {
       </div>
 
       <div className="grid border-t border-sky-300/25 sm:grid-cols-3">
+        {comparison.map((item, index) => (
+          <div
+            key={item.label}
+            className={`p-4 sm:p-5 ${
+              index > 0
+                ? "border-t border-white/10 sm:border-l sm:border-t-0"
+                : ""
+            }`}
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+              {item.label}
+            </p>
+            <p className="mt-2 text-sm leading-5 text-slate-200">
+              {item.detail}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ProgramManagerVisual() {
+  const stages = [
+    {
+      label: "Project network signals",
+      items: [
+        "Schedule changes",
+        "Cross-project dependencies",
+        "Competing resource demands",
+      ],
+    },
+    {
+      label: "AI-supported coordination",
+      items: ["Map", "Detect collisions", "Cascade impact"],
+    },
+    {
+      label: "Program decisions",
+      items: [
+        "Reconcile timelines",
+        "Sequence dependencies",
+        "Align owners",
+      ],
+    },
+  ];
+
+  const comparison = [
+    {
+      label: "Fragmented",
+      detail: "Status held across separate project plans",
+    },
+    {
+      label: "Multiplied",
+      detail: "Dependency collisions surfaced early",
+    },
+    {
+      label: "Still human",
+      detail: "The negotiation and coalition-building",
+    },
+  ];
+
+  return (
+    <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
+      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+        {stages.map((stage, index) => (
+          <div key={stage.label} className="contents">
+            <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                {stage.label}
+              </p>
+              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
+                {stage.items.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="text-sky-300" aria-hidden="true">
+                      •
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {index < stages.length - 1 && (
+              <div
+                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
+                aria-hidden="true"
+              >
+                →
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="grid border-t border-sky-300/20 sm:grid-cols-3">
         {comparison.map((item, index) => (
           <div
             key={item.label}
@@ -561,13 +674,112 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-950 px-6 py-24 lg:px-8">
+      <section
+        id="program-manager"
+        className="border-b border-white/10 bg-slate-950 px-6 py-24 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <div>
+              <p className="text-sm font-medium text-sky-300">03</p>
+
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Program Manager
+              </h2>
+
+              <p className="mt-4 text-xl text-slate-300">
+                Coordinating at scale
+              </p>
+
+              <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">
+                Orchestrates many interdependent projects toward a single
+                enterprise outcome. Success is measured across the whole, not
+                any one part.
+              </p>
+
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                  AI-leverage signature
+                </p>
+                <p className="mt-2 text-lg font-medium text-white">
+                  Coordination
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                  Credibility anchors
+                </p>
+
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                  <li>30–40 interrelated projects</li>
+                  <li>SVP-level governance and prioritization</li>
+                  <li>Executive dashboards in Power BI and Smartsheet</li>
+                </ul>
+              </div>
+
+              <ProgramManagerVisual />
+            </div>
+
+            <div className="space-y-6">
+              {programManagerActivities.map((activity, index) => (
+                <article
+                  key={activity.title}
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
+                >
+                  <div className="border-b border-white/10 px-6 py-5">
+                    <p className="text-xs text-sky-300">Activity {index + 1}</p>
+                    <h3 className="mt-2 text-xl font-semibold">
+                      {activity.title}
+                    </h3>
+                  </div>
+
+                  <div className="grid md:grid-cols-2">
+                    <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                        Pre-AI
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-slate-300">
+                        {activity.preAi}
+                      </p>
+                    </div>
+
+                    <div className="bg-sky-400/[0.04] p-6">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                        AI-multiplied
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-slate-200">
+                        {activity.aiMultiplied}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-sky-300/20 bg-sky-400/[0.06] p-7 sm:p-9">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+              What stays human
+            </p>
+
+            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
+              Holding the line between competing project owners and executives
+              — the negotiation, coalition-building, and judgment about which
+              outcome the program actually exists to serve. AI coordinates the
+              information. The program manager coordinates the people.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-900/60 px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
             Next altitudes
           </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-5">
             {roles.map((role) => (
               <article
                 key={role.title}
