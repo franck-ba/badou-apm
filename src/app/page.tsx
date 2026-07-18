@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm";
+
 const businessAnalystActivities = [
   {
     title: "Requirements Elicitation & Synthesis",
@@ -1263,19 +1265,29 @@ export default function Home() {
         id="contact"
         className="border-t border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
       >
-        <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
-            Contact
-          </p>
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+              Contact
+            </p>
 
-          <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Start a conversation.
-          </h2>
+            <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+              Start a conversation.
+            </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-            The contact form—and its email and SMS notification flow—will be
-            connected after the public-profile content is in place.
-          </p>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+              Whether the need is understanding the problem, delivering the
+              work, coordinating at scale, allocating investment, or building
+              something new, start with the challenge in front of you.
+            </p>
+
+            <p className="mt-8 max-w-xl border-l-2 border-sky-300/50 pl-5 text-sm leading-6 text-slate-300">
+              Submissions will notify me by email and text so I can respond
+              promptly.
+            </p>
+          </div>
+
+          <ContactForm />
         </div>
       </section>
 
