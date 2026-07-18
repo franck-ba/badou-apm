@@ -1175,6 +1175,90 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-b border-white/10 bg-slate-950 px-6 py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+            The constant
+          </p>
+
+          <h2 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight sm:text-5xl">
+            The work changes. The accountability does not.
+          </h2>
+
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+            Across every altitude, AI increases speed, scale, and reach. The
+            human responsibility rises with the stakes.
+          </p>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-4 md:items-end">
+            <article className="border-t border-sky-300/25 bg-slate-900/50 p-5 md:min-h-44">
+              <p className="text-xs text-sky-300">01</p>
+              <h3 className="mt-4 text-lg font-semibold text-white">
+                Define what is real
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                Decide which requirements actually matter.
+              </p>
+            </article>
+
+            <article className="border-t border-sky-300/35 bg-slate-900/60 p-5 md:min-h-48">
+              <p className="text-xs text-sky-300">02</p>
+              <h3 className="mt-4 text-lg font-semibold text-white">
+                Own the commitment
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                Escalate, absorb, and hold the line on scope.
+              </p>
+            </article>
+
+            <article className="border-t border-sky-300/45 bg-slate-900/70 p-5 md:min-h-52">
+              <p className="text-xs text-sky-300">03</p>
+              <h3 className="mt-4 text-lg font-semibold text-white">
+                Coordinate the people
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                Align competing owners around the outcome.
+              </p>
+            </article>
+
+            <article className="border-t border-sky-300/60 bg-slate-900/80 p-5 md:min-h-56">
+              <p className="text-xs text-sky-300">04</p>
+              <h3 className="mt-4 text-lg font-semibold text-white">
+                Stand behind the investment call
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                Choose where finite capital and capacity go.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-8 border-t border-dashed border-sky-300/30 pt-8">
+            <article className="grid gap-5 rounded-2xl border border-sky-300/25 bg-sky-400/[0.06] p-7 sm:p-9 md:grid-cols-[auto_1fr] md:items-center md:gap-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-sky-300/40 text-sm font-medium text-sky-300">
+                All 4
+              </div>
+
+              <div>
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                  Founder application
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold text-white">
+                  Own the whole venture
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-slate-300">
+                  Decide what should be built and why.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <p className="mt-12 border-l-2 border-sky-300/60 pl-6 text-2xl font-medium leading-9 text-white sm:text-3xl sm:leading-10">
+            AI multiplies the work. It does not inherit the judgment or the
+            accountability.
+          </p>
+        </div>
+      </section>
+
       <section
         id="contact"
         className="border-t border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
