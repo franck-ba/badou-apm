@@ -1,12 +1,3 @@
-const roles = [
-  {
-    number: "04",
-    title: "Portfolio Manager",
-    altitude: "Allocating the investment",
-    leverage: "Decision support",
-  },
-];
-
 const businessAnalystActivities = [
   {
     title: "Requirements Elicitation & Synthesis",
@@ -83,6 +74,30 @@ const programManagerActivities = [
       "Prepare governance materials, frame trade-offs for SVP-level sessions, capture decisions live, then manually cascade them back into every affected project.",
     aiMultiplied:
       "AI prepares the trade-off analysis and scenario comparisons before the session, captures decisions in real time, and drafts the cascade of updates to each impacted project.",
+  },
+];
+
+const portfolioManagerActivities = [
+  {
+    title: "Investment Prioritization & Portfolio Selection",
+    preAi:
+      "Gather business cases, score initiatives against criteria by hand, build the prioritization model, and construct the C-suite recommendation over weeks.",
+    aiMultiplied:
+      "AI structures every business case into a consistent scoring model, runs scenario comparisons such as funding one initiative versus another under specific constraints, and drafts the ranked recommendation with the reasoning exposed so it can be challenged, not simply accepted.",
+  },
+  {
+    title: "Capacity Planning & Resource Allocation",
+    preAi:
+      "Manually reconcile demand against capacity across 20–30 initiatives, model what fits, find the bottleneck, and rebuild the whole picture whenever priorities shift.",
+    aiMultiplied:
+      "AI models demand versus capacity continuously, simulates the impact of adding or cutting an initiative, and flags the constraint before it becomes a delay.",
+  },
+  {
+    title: "Executive Reporting & Portfolio Governance",
+    preAi:
+      "Consolidate portfolio performance, build the C-suite deck, translate delivery data into investment language, and prepare for the hard questions by hand.",
+    aiMultiplied:
+      "AI consolidates performance into the investment narrative, anticipates the C-suite’s likely questions and drafts the answers, and keeps the governance view current between meetings, not only for them.",
   },
 ];
 
@@ -341,6 +356,97 @@ function ProgramManagerVisual() {
       </div>
 
       <div className="grid border-t border-sky-300/20 sm:grid-cols-3">
+        {comparison.map((item, index) => (
+          <div
+            key={item.label}
+            className={`p-4 sm:p-5 ${
+              index > 0
+                ? "border-t border-white/10 sm:border-l sm:border-t-0"
+                : ""
+            }`}
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+              {item.label}
+            </p>
+            <p className="mt-2 text-sm leading-5 text-slate-200">
+              {item.detail}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PortfolioManagerVisual() {
+  const stages = [
+    {
+      label: "Portfolio inputs",
+      items: [
+        "Business cases",
+        "Capacity constraints",
+        "Strategic priorities",
+      ],
+    },
+    {
+      label: "AI-supported decision analysis",
+      items: ["Normalize", "Compare scenarios", "Expose trade-offs"],
+    },
+    {
+      label: "Portfolio decisions",
+      items: ["Fund", "Defer", "Stop"],
+    },
+  ];
+
+  const comparison = [
+    {
+      label: "Manual",
+      detail: "Weeks to rebuild the prioritization view",
+    },
+    {
+      label: "Multiplied",
+      detail: "Scenario impact surfaced on demand",
+    },
+    {
+      label: "Still human",
+      detail: "The capital allocation call",
+    },
+  ];
+
+  return (
+    <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+        {stages.map((stage, index) => (
+          <div key={stage.label} className="contents">
+            <div className="rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                {stage.label}
+              </p>
+              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
+                {stage.items.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="text-sky-300" aria-hidden="true">
+                      •
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {index < stages.length - 1 && (
+              <div
+                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
+                aria-hidden="true"
+              >
+                →
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="grid border-t border-sky-300/25 sm:grid-cols-3">
         {comparison.map((item, index) => (
           <div
             key={item.label}
@@ -773,35 +879,103 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-900/60 px-6 py-24 lg:px-8">
+      <section
+        id="portfolio-manager"
+        className="border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
+      >
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
-            Next altitudes
-          </p>
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <div>
+              <p className="text-sm font-medium text-sky-300">04</p>
 
-          <div className="mt-10 grid gap-5">
-            {roles.map((role) => (
-              <article
-                key={role.title}
-                className="rounded-2xl border border-white/10 bg-slate-950/70 p-7"
-              >
-                <p className="text-sm text-sky-300">{role.number}</p>
-                <h3 className="mt-4 text-2xl font-semibold">{role.title}</h3>
-                <p className="mt-2 text-slate-300">{role.altitude}</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Portfolio Manager
+              </h2>
 
-                <div className="mt-8 border-t border-white/10 pt-5">
-                  <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
-                    AI-leverage signature
-                  </p>
-                  <p className="mt-2 font-medium text-white">{role.leverage}</p>
-                </div>
+              <p className="mt-4 text-xl text-slate-300">
+                Allocating the investment
+              </p>
 
-                <p className="mt-8 text-sm text-slate-500">
-                  Full Pre-AI and AI-multiplied showcase coming in the next
-                  build step.
+              <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">
+                Decides where finite capital and capacity go across the
+                enterprise. The call carries real money and real consequence.
+              </p>
+
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                  AI-leverage signature
                 </p>
-              </article>
-            ))}
+                <p className="mt-2 text-lg font-medium text-white">
+                  Decision support
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                  Credibility anchors
+                </p>
+
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                  <li>$2M+ portfolio</li>
+                  <li>20–30 concurrent initiatives</li>
+                  <li>
+                    Governance enhancements that cut project delays by 25%
+                  </li>
+                  <li>Influenced multi-million-dollar C-suite decisions</li>
+                </ul>
+              </div>
+
+              <PortfolioManagerVisual />
+            </div>
+
+            <div className="space-y-6">
+              {portfolioManagerActivities.map((activity, index) => (
+                <article
+                  key={activity.title}
+                  className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                >
+                  <div className="border-b border-white/10 px-6 py-5">
+                    <p className="text-xs text-sky-300">Activity {index + 1}</p>
+                    <h3 className="mt-2 text-xl font-semibold">
+                      {activity.title}
+                    </h3>
+                  </div>
+
+                  <div className="grid md:grid-cols-2">
+                    <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                        Pre-AI
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-slate-300">
+                        {activity.preAi}
+                      </p>
+                    </div>
+
+                    <div className="bg-sky-400/[0.06] p-6">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                        AI-multiplied
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-slate-200">
+                        {activity.aiMultiplied}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-sky-300/25 bg-slate-950/70 p-7 sm:p-9">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+              What stays human
+            </p>
+
+            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
+              The allocation call itself. Which bets the enterprise makes with
+              finite capital, when to kill a sunk-cost initiative, and standing
+              behind a multi-million-dollar recommendation in front of the
+              C-suite. AI sharpens the decision. The portfolio leader owns it.
+            </p>
           </div>
         </div>
       </section>
