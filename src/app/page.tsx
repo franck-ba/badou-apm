@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import SectionNavigator from "@/components/SectionNavigator";
 
 const businessAnalystActivities = [
   {
@@ -607,9 +608,11 @@ export default function Home() {
         </div>
       </header>
 
+      <SectionNavigator />
+
       <section
         id="top"
-        className="mx-auto flex min-h-[calc(100vh-81px)] max-w-7xl flex-col justify-center px-6 py-24 lg:px-8"
+        className="mx-auto flex min-h-[calc(100vh-81px)] max-w-7xl scroll-mt-20 flex-col justify-center px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <p className="max-w-4xl text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
           Business Analyst · Project Manager · Program Manager · Portfolio
@@ -664,7 +667,7 @@ export default function Home() {
 
       <section
         id="work"
-        className="border-y border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
+        className="scroll-mt-20 border-y border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
@@ -679,7 +682,7 @@ export default function Home() {
 
       <section
         id="business-analyst"
-        className="border-b border-white/10 px-6 py-24 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -780,7 +783,7 @@ export default function Home() {
 
       <section
         id="project-manager"
-        className="border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -883,7 +886,7 @@ export default function Home() {
 
       <section
         id="program-manager"
-        className="border-b border-white/10 bg-slate-950 px-6 py-24 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -982,7 +985,7 @@ export default function Home() {
 
       <section
         id="portfolio-manager"
-        className="border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -1083,7 +1086,7 @@ export default function Home() {
 
       <section
         id="founder"
-        className="border-b border-white/10 bg-sky-400/[0.03] px-6 py-24 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-sky-400/[0.03] px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="border-l-2 border-sky-300/50 pl-5 sm:pl-7">
@@ -1177,7 +1180,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b border-white/10 bg-slate-950 px-6 py-24 lg:px-8">
+      <section
+        id="constant"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+      >
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
             The constant
@@ -1263,7 +1269,7 @@ export default function Home() {
 
       <section
         id="contact"
-        className="border-t border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
+        className="scroll-mt-20 border-t border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
