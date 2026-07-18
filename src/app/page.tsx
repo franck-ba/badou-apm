@@ -1288,8 +1288,7 @@ export default function Home() {
             </p>
 
             <p className="mt-8 max-w-xl border-l-2 border-sky-300/50 pl-5 text-sm leading-6 text-slate-300">
-              Submissions will notify me by email and text so I can respond
-              promptly.
+              Submissions will notify me by email so I can respond promptly.
             </p>
           </div>
 
