@@ -34,6 +34,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [submissionError, setSubmissionError] = useState("");
 
   function validateForm() {
     const nextErrors: FormErrors = {};
@@ -68,6 +69,7 @@ export default function ContactForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSuccessMessage("");
+    setSubmissionError("");
 
     const nextErrors = validateForm();
     setErrors(nextErrors);
@@ -77,12 +79,32 @@ export default function ContactForm() {
     }
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 700));
-    setIsSubmitting(false);
-    setValues(initialValues);
-    setSuccessMessage(
-      "Thank you. Your message is ready to be submitted once notifications are connected.",
-    );
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      const result = (await response.json().catch(() => null)) as {
+        success?: boolean;
+      } | null;
+
+      if (!response.ok || result?.success !== true) {
+        throw new Error("Contact submission failed.");
+      }
+
+      setValues(initialValues);
+      setSuccessMessage("Thank you. Your message has been sent.");
+    } catch {
+      setSubmissionError(
+        "Your message could not be sent. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -113,6 +135,16 @@ export default function ContactForm() {
           aria-live="polite"
         >
           {successMessage}
+        </div>
+      )}
+
+      {submissionError && (
+        <div
+          className="mb-6 rounded-xl border border-red-300/30 bg-red-400/10 p-4 text-sm text-red-200"
+          role="alert"
+          aria-live="assertive"
+        >
+          {submissionError}
         </div>
       )}
 
