@@ -1,11 +1,5 @@
 const roles = [
   {
-    number: "02",
-    title: "Project Manager",
-    altitude: "Delivering the work",
-    leverage: "Foresight",
-  },
-  {
     number: "03",
     title: "Program Manager",
     altitude: "Coordinating at scale",
@@ -40,6 +34,37 @@ const businessAnalystActivities = [
       "Map the current-state process through workshops and diagrams, identify inefficiencies by inspection, hand-model the future state, and build the case for the solution.",
     aiMultiplied:
       "AI drafts current- and future-state process maps from interview transcripts and existing documentation, quantifies the improvement opportunity, and generates the options analysis for stakeholder review.",
+  },
+];
+
+const projectManagerActivities = [
+  {
+    title: "Planning & Scheduling",
+    preAi:
+      "Build the WBS, sequence tasks, estimate durations, construct and level the schedule by hand. Re-baseline manually every time reality moves.",
+    aiMultiplied:
+      "AI drafts the WBS and first-pass schedule from the scope, proposes dependencies and estimates from comparable past projects, and re-forecasts the timeline automatically the moment a task slips.",
+  },
+  {
+    title: "Status Reporting & Stakeholder Communication",
+    preAi:
+      "Chase the team for updates. Hand-assemble the weekly status deck. Re-translate the same update into different formats for executives versus the working team.",
+    aiMultiplied:
+      "AI compiles status directly from the task tracker, drafts both the executive summary and the detailed team version from one source of truth, and tunes tone per audience. The PM reviews and sends — minutes, not hours.",
+  },
+  {
+    title: "Risk & Issue Management",
+    preAi:
+      "Maintain the RAID log by hand. Rely on experience to sense emerging risk. Escalate reactively, usually after it has already surfaced in a meeting.",
+    aiMultiplied:
+      "AI scans status trends, velocity, and open-issue patterns to flag risks before they escalate, drafts mitigation options, and keeps the RAID log current directly from project activity.",
+  },
+  {
+    title: "Distributed Team & Quality Leadership",
+    preAi:
+      "Coordinate onshore and offshore testers and test leads by hand across time zones — allocate work, chase test coverage, reconcile defect reports, and hold the quality bar through a high-stakes migration by sheer vigilance.",
+    aiMultiplied:
+      "AI drafts test coverage from requirements, clusters and de-duplicates defect reports across distributed teams, summarizes overnight offshore progress for the morning handoff, and flags coverage gaps before a release — so the lead manages exceptions, not spreadsheets.",
   },
 ];
 
@@ -116,6 +141,93 @@ function BusinessAnalystVisual() {
       </div>
 
       <div className="grid border-t border-sky-300/20 sm:grid-cols-3">
+        {comparison.map((item, index) => (
+          <div
+            key={item.label}
+            className={`p-4 sm:p-5 ${
+              index > 0
+                ? "border-t border-white/10 sm:border-l sm:border-t-0"
+                : ""
+            }`}
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+              {item.label}
+            </p>
+            <p className="mt-2 text-sm leading-5 text-slate-200">
+              {item.detail}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ProjectManagerVisual() {
+  const stages = [
+    {
+      label: "Signals",
+      items: ["Task slippage", "Velocity decline", "Open issue patterns"],
+    },
+    {
+      label: "AI-supported foresight",
+      items: ["Detect", "Forecast", "Recommend"],
+    },
+    {
+      label: "PM decisions",
+      items: ["Re-sequence work", "Escalate risk", "Protect scope"],
+    },
+  ];
+
+  const comparison = [
+    {
+      label: "Reactive",
+      detail: "Risk discovered in status meetings",
+    },
+    {
+      label: "Multiplied",
+      detail: "Risk surfaced before impact",
+    },
+    {
+      label: "Still human",
+      detail: "The commitment and escalation call",
+    },
+  ];
+
+  return (
+    <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+      <div className="grid gap-3 p-4 sm:p-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-stretch">
+        {stages.map((stage, index) => (
+          <div key={stage.label} className="contents">
+            <div className="rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                {stage.label}
+              </p>
+              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
+                {stage.items.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="text-sky-300" aria-hidden="true">
+                      •
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {index < stages.length - 1 && (
+              <div
+                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
+                aria-hidden="true"
+              >
+                →
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="grid border-t border-sky-300/25 sm:grid-cols-3">
         {comparison.map((item, index) => (
           <div
             key={item.label}
@@ -346,13 +458,116 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-900/60 px-6 py-24 lg:px-8">
+      <section
+        id="project-manager"
+        className="border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:px-8"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <div>
+              <p className="text-sm font-medium text-sky-300">02</p>
+
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Project Manager
+              </h2>
+
+              <p className="mt-4 text-xl text-slate-300">
+                Delivering the work
+              </p>
+
+              <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">
+                Owns a single delivery end to end — scope, schedule, risk,
+                commitment.
+              </p>
+
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                  AI-leverage signature
+                </p>
+                <p className="mt-2 text-lg font-medium text-white">Foresight</p>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                  Credibility anchors
+                </p>
+
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                  <li>Cross-functional teams of 8+</li>
+                  <li>
+                    Delivery inside complex, multi-project program environments
+                  </li>
+                  <li>Agile and hybrid sprint execution</li>
+                  <li>
+                    Led onshore and offshore test teams and leads through a
+                    major platform migration
+                  </li>
+                  <li>99.5% accuracy</li>
+                  <li>40% testing-efficiency gains</li>
+                </ul>
+              </div>
+
+              <ProjectManagerVisual />
+            </div>
+
+            <div className="space-y-6">
+              {projectManagerActivities.map((activity, index) => (
+                <article
+                  key={activity.title}
+                  className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                >
+                  <div className="border-b border-white/10 px-6 py-5">
+                    <p className="text-xs text-sky-300">Activity {index + 1}</p>
+                    <h3 className="mt-2 text-xl font-semibold">
+                      {activity.title}
+                    </h3>
+                  </div>
+
+                  <div className="grid md:grid-cols-2">
+                    <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                        Pre-AI
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-slate-300">
+                        {activity.preAi}
+                      </p>
+                    </div>
+
+                    <div className="bg-sky-400/[0.06] p-6">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                        AI-multiplied
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-slate-200">
+                        {activity.aiMultiplied}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-sky-300/25 bg-slate-950/70 p-7 sm:p-9">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+              What stays human
+            </p>
+
+            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
+              Owning the commitment. When to escalate, when to absorb, when to
+              hold the line on scope, and when to have the hard conversation.
+              That accountability does not delegate to a model.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-950 px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
             Next altitudes
           </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             {roles.map((role) => (
               <article
                 key={role.title}
