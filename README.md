@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# badou-apm.com
 
-## Getting Started
+This repository contains [Badou Franck](https://badou-apm.com)'s professional website, demonstrating 20 years of technology delivery leadership across:
 
-First, run the development server:
+- Business Analysis
+- Project Management
+- Program Management
+- Portfolio Management
+
+The site presents real deliverables in two states—**Pre-AI** and **AI-multiplied**—to show how AI can multiply execution while judgment and accountability remain human.
+
+## Live Site
+
+- [badou-apm.com](https://badou-apm.com)
+- [www.badou-apm.com](https://www.badou-apm.com)
+- [badou-apm.vercel.app](https://badou-apm.vercel.app)
+
+## Phase 1 Scope
+
+Phase 1 is complete and live. The current production site includes:
+
+- A judgment-and-range hero
+- A four-rung accountability climb:
+  - **Understand**
+  - **Deliver**
+  - **Coordinate**
+  - **Allocate**
+- A Business Analyst showcase
+- A Project Manager showcase
+- A Program Manager showcase
+- A Portfolio Manager showcase
+- A separate Founder capstone comparing CareVizor and TopCloserR
+- “The Constant” judgment-through-line
+- Sticky desktop navigation
+- A mobile section selector
+- A contact form
+- Responsive layouts
+- Metadata
+- Open Graph metadata
+- Twitter cards
+- `robots.txt`
+- `sitemap.xml`
+- JSON-LD structured data
+
+> The Founder capstone is intentionally separate from the four-role climb and is not a fifth numbered role.
+
+## Technology Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Vercel
+- Make
+- Zoho Mail
+- No database
+- No authentication
+
+## Local Development
 
 ```bash
+git clone https://github.com/franck-ba/badou-apm.git
+cd badou-apm
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server is available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment and Operations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Production branch:** `main`
+- **Hosting:** Vercel Hobby
+- **Deployment:** Every push to `main` automatically deploys through Vercel
+- **DNS:** GoDaddy
+- **Email:** Zoho Mail Lite
+- **Automation:** Make
+- **Database:** None
 
-## Learn More
+## Project Information
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Owner:** Badou Franck
+- **Repository:** [`franck-ba/badou-apm`](https://github.com/franck-ba/badou-apm)
+- **Status:** Phase 1 is complete and live
