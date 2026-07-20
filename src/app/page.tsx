@@ -145,11 +145,11 @@ function BusinessAnalystVisual() {
   ];
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
-      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
+      <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
+            <div className="min-w-0 rounded-xl border border-white/10 bg-slate-900/70 p-4">
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                 {stage.label}
               </p>
@@ -167,7 +167,7 @@ function BusinessAnalystVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
+                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -232,11 +232,11 @@ function ProjectManagerVisual() {
   ];
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
-      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+      <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
+            <div className="min-w-0 rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                 {stage.label}
               </p>
@@ -254,7 +254,7 @@ function ProjectManagerVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
+                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -327,11 +327,11 @@ function ProgramManagerVisual() {
   ];
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
-      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
+      <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
+            <div className="min-w-0 rounded-xl border border-white/10 bg-slate-900/70 p-4">
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                 {stage.label}
               </p>
@@ -349,7 +349,7 @@ function ProgramManagerVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
+                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -418,11 +418,11 @@ function PortfolioManagerVisual() {
   ];
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
-      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+      <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
+            <div className="min-w-0 rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                 {stage.label}
               </p>
@@ -440,7 +440,7 @@ function PortfolioManagerVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
+                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -710,7 +710,7 @@ export default function Home() {
 
       <section
         id="business-analyst"
-        className="scroll-mt-20 border-b border-white/10 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
@@ -774,14 +774,14 @@ export default function Home() {
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
               The Approach
             </p>
-            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+            <div className="grid min-w-0 gap-10">
               <BusinessAnalystVisual />
 
-              <div className="space-y-6">
+              <div className="min-w-0 space-y-6">
                 {businessAnalystActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
                   >
                     <div className="border-b border-white/10 px-6 py-5">
                       <p className="text-xs text-sky-300">
@@ -792,8 +792,8 @@ export default function Home() {
                       </h3>
                     </div>
 
-                    <div className="grid xl:grid-cols-2">
-                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                    <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                           Pre-AI
                         </p>
@@ -802,7 +802,7 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <div className="bg-sky-400/[0.04] p-6">
+                      <div className="min-w-0 bg-sky-400/[0.04] p-6">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                           AI-multiplied
                         </p>
@@ -821,7 +821,7 @@ export default function Home() {
 
       <section
         id="project-manager"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
@@ -885,14 +885,14 @@ export default function Home() {
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
               The Approach
             </p>
-            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+            <div className="grid min-w-0 gap-10">
               <ProjectManagerVisual />
 
-              <div className="space-y-6">
+              <div className="min-w-0 space-y-6">
                 {projectManagerActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
                   >
                     <div className="border-b border-white/10 px-6 py-5">
                       <p className="text-xs text-sky-300">
@@ -903,8 +903,8 @@ export default function Home() {
                       </h3>
                     </div>
 
-                    <div className="grid xl:grid-cols-2">
-                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                    <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                           Pre-AI
                         </p>
@@ -913,7 +913,7 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <div className="bg-sky-400/[0.06] p-6">
+                      <div className="min-w-0 bg-sky-400/[0.06] p-6">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                           AI-multiplied
                         </p>
@@ -932,7 +932,7 @@ export default function Home() {
 
       <section
         id="program-manager"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
@@ -994,14 +994,14 @@ export default function Home() {
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
               The Approach
             </p>
-            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+            <div className="grid min-w-0 gap-10">
               <ProgramManagerVisual />
 
-              <div className="space-y-6">
+              <div className="min-w-0 space-y-6">
                 {programManagerActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
                   >
                     <div className="border-b border-white/10 px-6 py-5">
                       <p className="text-xs text-sky-300">
@@ -1012,8 +1012,8 @@ export default function Home() {
                       </h3>
                     </div>
 
-                    <div className="grid xl:grid-cols-2">
-                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                    <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                           Pre-AI
                         </p>
@@ -1022,7 +1022,7 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <div className="bg-sky-400/[0.04] p-6">
+                      <div className="min-w-0 bg-sky-400/[0.04] p-6">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                           AI-multiplied
                         </p>
@@ -1041,7 +1041,7 @@ export default function Home() {
 
       <section
         id="portfolio-manager"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
@@ -1103,14 +1103,14 @@ export default function Home() {
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
               The Approach
             </p>
-            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+            <div className="grid min-w-0 gap-10">
               <PortfolioManagerVisual />
 
-              <div className="space-y-6">
+              <div className="min-w-0 space-y-6">
                 {portfolioManagerActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
                   >
                     <div className="border-b border-white/10 px-6 py-5">
                       <p className="text-xs text-sky-300">
@@ -1121,8 +1121,8 @@ export default function Home() {
                       </h3>
                     </div>
 
-                    <div className="grid xl:grid-cols-2">
-                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                    <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                           Pre-AI
                         </p>
@@ -1131,7 +1131,7 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <div className="bg-sky-400/[0.06] p-6">
+                      <div className="min-w-0 bg-sky-400/[0.06] p-6">
                         <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
                           AI-multiplied
                         </p>

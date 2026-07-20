@@ -19,7 +19,7 @@ export default function RoleDisclosure({
   const action = isExpanded ? "Hide" : "View";
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 min-w-0">
       <button
         id={buttonId}
         type="button"
@@ -54,7 +54,7 @@ export default function RoleDisclosure({
 
       <div
         id={detailId}
-        className="mt-10"
+        className="mt-10 min-w-0 w-full"
         role="region"
         aria-labelledby={buttonId}
         hidden={!isExpanded}
