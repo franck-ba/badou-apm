@@ -574,11 +574,18 @@ function FounderVisual() {
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+      <a
+        href="#main-content"
+        className="sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:not-sr-only focus:rounded-md focus:bg-sky-300 focus:px-4 focus:py-3 focus:font-semibold focus:text-slate-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-950"
+      >
+        Skip to main content
+      </a>
+
       <header className="border-b border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
           <a
             href="#top"
-            className="text-lg font-semibold tracking-tight"
+            className="rounded-sm text-lg font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             aria-label="Badou Franck home"
           >
             Badou Franck
@@ -588,20 +595,29 @@ export default function Home() {
             className="hidden items-center gap-8 text-sm text-slate-300 md:flex"
             aria-label="Primary navigation"
           >
-            <a className="transition hover:text-white" href="#work">
+            <a
+              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              href="#work"
+            >
               How I Deliver
             </a>
-            <a className="transition hover:text-white" href="#founder">
+            <a
+              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              href="#founder"
+            >
               Founder
             </a>
-            <a className="transition hover:text-white" href="#contact">
+            <a
+              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              href="#contact"
+            >
               Contact
             </a>
           </nav>
 
           <a
             href="#contact"
-            className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-950 transition hover:bg-slate-200"
+            className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-950 transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Start a Conversation
           </a>
@@ -610,6 +626,7 @@ export default function Home() {
 
       <SectionNavigator />
 
+      <div id="main-content">
       <section
         id="top"
         className="mx-auto flex min-h-[calc(100vh-81px)] max-w-7xl scroll-mt-20 flex-col justify-center px-6 py-24 lg:scroll-mt-8 lg:px-8"
@@ -636,14 +653,14 @@ export default function Home() {
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
             href="#work"
-            className="inline-flex items-center justify-center rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300"
+            className="inline-flex items-center justify-center rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             See How I Deliver
           </a>
 
           <a
             href="#founder"
-            className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white transition hover:border-white/40 hover:bg-white/5"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white transition hover:border-white/40 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             See What I&apos;m Building
           </a>
@@ -704,7 +721,7 @@ export default function Home() {
               </p>
 
               <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   AI-leverage signature
                 </p>
                 <p className="mt-2 text-lg font-medium text-white">Synthesis</p>
@@ -715,7 +732,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   Credibility anchors
                 </p>
 
@@ -744,7 +761,7 @@ export default function Home() {
 
                   <div className="grid xl:grid-cols-2">
                     <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                         Pre-AI
                       </p>
                       <p className="mt-4 text-sm leading-7 text-slate-300">
@@ -804,14 +821,14 @@ export default function Home() {
               </p>
 
               <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   AI-leverage signature
                 </p>
                 <p className="mt-2 text-lg font-medium text-white">Foresight</p>
               </div>
 
               <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   Credibility anchors
                 </p>
 
@@ -848,7 +865,7 @@ export default function Home() {
 
                   <div className="grid xl:grid-cols-2">
                     <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                         Pre-AI
                       </p>
                       <p className="mt-4 text-sm leading-7 text-slate-300">
@@ -908,7 +925,7 @@ export default function Home() {
               </p>
 
               <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   AI-leverage signature
                 </p>
                 <p className="mt-2 text-lg font-medium text-white">
@@ -917,7 +934,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   Credibility anchors
                 </p>
 
@@ -946,7 +963,7 @@ export default function Home() {
 
                   <div className="grid xl:grid-cols-2">
                     <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                         Pre-AI
                       </p>
                       <p className="mt-4 text-sm leading-7 text-slate-300">
@@ -1006,7 +1023,7 @@ export default function Home() {
               </p>
 
               <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   AI-leverage signature
                 </p>
                 <p className="mt-2 text-lg font-medium text-white">
@@ -1015,7 +1032,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
                   Credibility anchors
                 </p>
 
@@ -1047,7 +1064,7 @@ export default function Home() {
 
                   <div className="grid xl:grid-cols-2">
                     <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                         Pre-AI
                       </p>
                       <p className="mt-4 text-sm leading-7 text-slate-300">
@@ -1104,7 +1121,7 @@ export default function Home() {
               that full range to something I am building myself.
             </p>
 
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500">
+            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-400">
               A separate movement after the climb — not a fifth rung, but all
               four altitudes operating at once.
             </p>
@@ -1112,7 +1129,7 @@ export default function Home() {
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <article className="rounded-2xl border border-white/10 bg-slate-950/70 p-7 sm:p-9">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-500">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
                 Pre-AI build
               </p>
 
@@ -1295,9 +1312,10 @@ export default function Home() {
           <ContactForm />
         </div>
       </section>
+      </div>
 
       <footer className="border-t border-white/10 px-6 py-8 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Badou Franck</p>
           <p>Technology delivery leadership, multiplied by AI.</p>
         </div>

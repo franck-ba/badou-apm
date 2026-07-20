@@ -147,7 +147,7 @@ export default function SectionNavigator() {
             className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
               activeSection === "top"
                 ? "bg-sky-400/10 font-semibold text-white"
-                : "text-slate-500 hover:bg-white/5 hover:text-slate-200"
+                : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
             }`}
             aria-current={activeSection === "top" ? "location" : undefined}
           >
@@ -175,7 +175,7 @@ export default function SectionNavigator() {
                   className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs leading-4 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
                     isActive
                       ? "bg-sky-400/10 font-semibold text-white"
-                      : "text-slate-500 hover:bg-white/5 hover:text-slate-200"
+                      : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
                   }`}
                   aria-current={isActive ? "location" : undefined}
                 >
@@ -207,7 +207,7 @@ export default function SectionNavigator() {
                   className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
                     isActive
                       ? "bg-sky-400/10 font-semibold text-white"
-                      : "text-slate-500 hover:bg-white/5 hover:text-slate-200"
+                      : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
                   }`}
                   aria-current={isActive ? "location" : undefined}
                 >

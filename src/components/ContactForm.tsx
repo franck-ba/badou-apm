@@ -27,7 +27,7 @@ const initialValues: FormValues = {
 };
 
 const fieldClassName =
-  "mt-2 w-full rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-base text-white outline-none transition placeholder:text-slate-600 focus:border-sky-300 focus:ring-2 focus:ring-sky-300/25";
+  "mt-2 w-full rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-base text-white outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:ring-2 focus:ring-sky-300/25";
 
 export default function ContactForm() {
   const [values, setValues] = useState<FormValues>(initialValues);
@@ -226,7 +226,7 @@ export default function ContactForm() {
           className="text-sm font-medium text-slate-200"
           htmlFor="phone"
         >
-          Phone number <span className="text-slate-500">(optional)</span>
+          Phone number <span className="text-slate-400">(optional)</span>
         </label>
         <input
           className={fieldClassName}
@@ -247,7 +247,7 @@ export default function ContactForm() {
           className="text-sm font-medium text-slate-200"
           htmlFor="organization"
         >
-          Organization <span className="text-slate-500">(optional)</span>
+          Organization <span className="text-slate-400">(optional)</span>
         </label>
         <input
           className={fieldClassName}
@@ -332,7 +332,7 @@ export default function ContactForm() {
             errors.message ? "message-help message-error" : "message-help"
           }
         />
-        <p id="message-help" className="mt-2 text-sm text-slate-500">
+        <p id="message-help" className="mt-2 text-sm text-slate-400">
           Share the challenge, context, and desired outcome. 20–5,000
           characters.
         </p>
