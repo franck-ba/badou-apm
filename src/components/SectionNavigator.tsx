@@ -3,20 +3,26 @@
 import { ChangeEvent, MouseEvent, useEffect, useState } from "react";
 
 const roleSections = [
-  { id: "business-analyst", label: "Business Analyst", number: "01" },
-  { id: "project-manager", label: "Project Manager", number: "02" },
-  { id: "program-manager", label: "Program Manager", number: "03" },
-  { id: "portfolio-manager", label: "Portfolio Manager", number: "04" },
+  { id: "business-analyst", label: "Business Analyst", shortLabel: "BA" },
+  { id: "project-manager", label: "Project Manager", shortLabel: "PM" },
+  { id: "program-manager", label: "Program Manager", shortLabel: "PgM" },
+  { id: "portfolio-manager", label: "Portfolio Manager", shortLabel: "PfM" },
 ] as const;
 
 const closingSections = [
-  { id: "founder", label: "Founder" },
-  { id: "constant", label: "The Constant" },
-  { id: "contact", label: "Contact" },
+  { id: "founder", label: "Founder", shortLabel: "Founder" },
+  { id: "constant", label: "What Stays Human", shortLabel: "Constant" },
+  { id: "contact", label: "Contact", shortLabel: "Contact" },
 ] as const;
 
+const overviewSection = {
+  id: "top",
+  label: "Overview",
+  shortLabel: "Overview",
+} as const;
+
 const sections = [
-  { id: "top", label: "Overview" },
+  overviewSection,
   ...roleSections,
   ...closingSections,
 ] as const;
@@ -138,28 +144,31 @@ export default function SectionNavigator() {
 
       {showDesktopRail && (
         <nav
-          className="group fixed left-0 top-1/2 z-40 hidden w-44 -translate-x-36 -translate-y-1/2 rounded-r-xl border border-l-0 border-white/10 bg-slate-950/90 p-2 shadow-2xl shadow-slate-950/40 backdrop-blur transition-transform duration-200 hover:translate-x-0 focus-within:translate-x-0 motion-reduce:transition-none lg:block"
+          className="group fixed left-0 top-1/2 z-40 hidden w-60 -translate-x-40 -translate-y-1/2 rounded-r-xl border border-l-0 border-white/10 bg-slate-950/90 p-2 shadow-2xl shadow-slate-950/40 backdrop-blur transition-transform duration-200 hover:translate-x-0 focus-within:translate-x-0 motion-reduce:transition-none lg:block"
           aria-label="Page sections"
         >
           <a
             href="#top"
             onClick={(event) => handleLinkClick(event, "top")}
-            className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
+            className={`grid grid-cols-[1fr_5rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
               activeSection === "top"
                 ? "bg-sky-400/10 font-semibold text-white"
                 : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
             }`}
             aria-current={activeSection === "top" ? "location" : undefined}
           >
-            <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
-              Overview
+            <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 motion-reduce:transition-none">
+              {overviewSection.label}
             </span>
-            <span className="flex h-8 items-center justify-center" aria-hidden="true">
-              <span
-                className={`h-1.5 w-1.5 rounded-full ${
-                  activeSection === "top" ? "bg-sky-300" : "bg-slate-700"
-                }`}
-              />
+            <span
+              className={`flex h-8 items-center justify-center border-l-2 px-2 text-center transition-opacity group-hover:opacity-0 group-focus-within:opacity-0 motion-reduce:transition-none ${
+                activeSection === "top"
+                  ? "border-sky-300 text-sky-300"
+                  : "border-transparent text-slate-400"
+              }`}
+              aria-hidden="true"
+            >
+              {overviewSection.shortLabel}
             </span>
           </a>
 
@@ -172,23 +181,25 @@ export default function SectionNavigator() {
                   key={section.id}
                   href={`#${section.id}`}
                   onClick={(event) => handleLinkClick(event, section.id)}
-                  className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs leading-4 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
+                  className={`grid grid-cols-[1fr_5rem] items-center rounded-md text-xs leading-4 transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
                     isActive
                       ? "bg-sky-400/10 font-semibold text-white"
                       : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
                   }`}
                   aria-current={isActive ? "location" : undefined}
                 >
-                  <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                  <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 motion-reduce:transition-none">
                     {section.label}
                   </span>
                   <span
-                    className={`flex h-8 items-center justify-center border-l-2 text-sky-300 ${
-                      isActive ? "border-sky-300" : "border-transparent"
+                    className={`flex h-8 items-center justify-center border-l-2 px-2 text-center transition-opacity group-hover:opacity-0 group-focus-within:opacity-0 motion-reduce:transition-none ${
+                      isActive
+                        ? "border-sky-300 text-sky-300"
+                        : "border-transparent text-slate-400"
                     }`}
                     aria-hidden="true"
                   >
-                    {section.number}
+                    {section.shortLabel}
                   </span>
                 </a>
               );
@@ -204,22 +215,25 @@ export default function SectionNavigator() {
                   key={section.id}
                   href={`#${section.id}`}
                   onClick={(event) => handleLinkClick(event, section.id)}
-                  className={`grid grid-cols-[1fr_2rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
+                  className={`grid grid-cols-[1fr_5rem] items-center rounded-md text-xs transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-300/50 ${
                     isActive
                       ? "bg-sky-400/10 font-semibold text-white"
                       : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
                   }`}
                   aria-current={isActive ? "location" : undefined}
                 >
-                  <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                  <span className="px-2 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 motion-reduce:transition-none">
                     {section.label}
                   </span>
-                  <span className="flex h-8 items-center justify-center" aria-hidden="true">
-                    <span
-                      className={`h-1.5 w-1.5 rounded-full ${
-                        isActive ? "bg-sky-300" : "bg-slate-700"
-                      }`}
-                    />
+                  <span
+                    className={`flex h-8 items-center justify-center border-l-2 px-2 text-center transition-opacity group-hover:opacity-0 group-focus-within:opacity-0 motion-reduce:transition-none ${
+                      isActive
+                        ? "border-sky-300 text-sky-300"
+                        : "border-transparent text-slate-400"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    {section.shortLabel}
                   </span>
                 </a>
               );

@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import RoleDisclosure from "@/components/RoleDisclosure";
 import SectionNavigator from "@/components/SectionNavigator";
 
 const businessAnalystActivities = [
@@ -144,7 +145,7 @@ function BusinessAnalystVisual() {
   ];
 
   return (
-    <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
+    <div className="overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
       <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
@@ -231,7 +232,7 @@ function ProjectManagerVisual() {
   ];
 
   return (
-    <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+    <div className="overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
       <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
@@ -326,7 +327,7 @@ function ProgramManagerVisual() {
   ];
 
   return (
-    <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
+    <div className="overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
       <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
@@ -417,7 +418,7 @@ function PortfolioManagerVisual() {
   ];
 
   return (
-    <div className="mt-8 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+    <div className="overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
       <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
@@ -492,10 +493,11 @@ function FounderVisual() {
     {
       label: "TopCloserR",
       items: [
-        "Multi-sided marketplace",
-        "Broader operating scope",
-        "AI-directed build process",
-        "Ongoing product evolution",
+        "Product strategy",
+        "Architecture",
+        "The build",
+        "Source control",
+        "Operational analytics",
       ],
     },
   ];
@@ -592,7 +594,7 @@ export default function Home() {
           </a>
 
           <nav
-            className="hidden items-center gap-8 text-sm text-slate-300 md:flex"
+            className="hidden items-center gap-5 text-sm text-slate-300 md:flex lg:gap-8"
             aria-label="Primary navigation"
           >
             <a
@@ -600,6 +602,15 @@ export default function Home() {
               href="#work"
             >
               How I Deliver
+            </a>
+            <a
+              className="rounded-sm border-b border-sky-300/50 pb-1 font-medium text-sky-300 transition hover:border-sky-200 hover:text-sky-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              href="/execution-examples.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Execution Examples <span aria-hidden="true">↗</span>
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
             <a
               className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
@@ -702,84 +713,44 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
-            <div>
-              <p className="text-sm font-medium text-sky-300">01</p>
+          <div className="max-w-xl">
+            <p className="text-sm font-medium text-sky-300">01</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Business Analyst
-              </h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Business Analyst
+            </h2>
 
-              <p className="mt-4 text-xl text-slate-300">
-                Understanding the problem
+            <p className="mt-4 text-xl text-slate-300">
+              Understanding the problem
+            </p>
+
+            <p className="mt-6 text-base leading-7 text-slate-400">
+              Closest to the work. Translating organizational ambiguity into
+              precise specification. If the analyst gets this wrong, everything
+              built downstream is wrong.
+            </p>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                AI-leverage signature
               </p>
-
-              <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">
-                Closest to the work. Translating organizational ambiguity into
-                precise specification. If the analyst gets this wrong,
-                everything built downstream is wrong.
+              <p className="mt-2 text-lg font-medium text-white">Synthesis</p>
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                Turning scattered, contradictory human input into a coherent,
+                structured picture.
               </p>
-
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  AI-leverage signature
-                </p>
-                <p className="mt-2 text-lg font-medium text-white">Synthesis</p>
-                <p className="mt-3 text-sm leading-6 text-slate-400">
-                  Turning scattered, contradictory human input into a coherent,
-                  structured picture.
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  Credibility anchors
-                </p>
-
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
-                  <li>Requirements across five business lines</li>
-                  <li>75% reduction in documentation cycle time</li>
-                  <li>15% improvement in claims processing efficiency</li>
-                </ul>
-              </div>
-
-              <BusinessAnalystVisual />
             </div>
 
-            <div className="space-y-6">
-              {businessAnalystActivities.map((activity, index) => (
-                <article
-                  key={activity.title}
-                  className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
-                >
-                  <div className="border-b border-white/10 px-6 py-5">
-                    <p className="text-xs text-sky-300">Activity {index + 1}</p>
-                    <h3 className="mt-2 text-xl font-semibold">
-                      {activity.title}
-                    </h3>
-                  </div>
+            <div className="mt-8">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                Credibility anchors
+              </p>
 
-                  <div className="grid xl:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                        Pre-AI
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-300">
-                        {activity.preAi}
-                      </p>
-                    </div>
-
-                    <div className="bg-sky-400/[0.04] p-6">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-                        AI-multiplied
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-200">
-                        {activity.aiMultiplied}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>Requirements across five business lines</li>
+                <li>75% reduction in documentation cycle time</li>
+                <li>15% improvement in claims processing efficiency</li>
+              </ul>
             </div>
           </div>
 
@@ -795,6 +766,56 @@ export default function Home() {
               what&apos;s real.
             </p>
           </div>
+
+          <RoleDisclosure
+            detailId="business-analyst-details"
+            roleName="Business Analyst"
+          >
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+              The Approach
+            </p>
+            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+              <BusinessAnalystVisual />
+
+              <div className="space-y-6">
+                {businessAnalystActivities.map((activity, index) => (
+                  <article
+                    key={activity.title}
+                    className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
+                  >
+                    <div className="border-b border-white/10 px-6 py-5">
+                      <p className="text-xs text-sky-300">
+                        Activity {index + 1}
+                      </p>
+                      <h3 className="mt-2 text-xl font-semibold">
+                        {activity.title}
+                      </h3>
+                    </div>
+
+                    <div className="grid xl:grid-cols-2">
+                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                          Pre-AI
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                          {activity.preAi}
+                        </p>
+                      </div>
+
+                      <div className="bg-sky-400/[0.04] p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                          AI-multiplied
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                          {activity.aiMultiplied}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </RoleDisclosure>
         </div>
       </section>
 
@@ -803,87 +824,45 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
-            <div>
-              <p className="text-sm font-medium text-sky-300">02</p>
+          <div className="max-w-xl">
+            <p className="text-sm font-medium text-sky-300">02</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Project Manager
-              </h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Project Manager
+            </h2>
 
-              <p className="mt-4 text-xl text-slate-300">
-                Delivering the work
+            <p className="mt-4 text-xl text-slate-300">Delivering the work</p>
+
+            <p className="mt-6 text-base leading-7 text-slate-400">
+              Owns a single delivery end to end — scope, schedule, risk,
+              commitment.
+            </p>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                AI-leverage signature
               </p>
-
-              <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">
-                Owns a single delivery end to end — scope, schedule, risk,
-                commitment.
-              </p>
-
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  AI-leverage signature
-                </p>
-                <p className="mt-2 text-lg font-medium text-white">Foresight</p>
-              </div>
-
-              <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  Credibility anchors
-                </p>
-
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
-                  <li>Cross-functional teams of 8+</li>
-                  <li>
-                    Delivery inside complex, multi-project program environments
-                  </li>
-                  <li>Agile and hybrid sprint execution</li>
-                  <li>
-                    Led onshore and offshore test teams and leads through a
-                    major platform migration
-                  </li>
-                  <li>99.5% accuracy</li>
-                  <li>40% testing-efficiency gains</li>
-                </ul>
-              </div>
-
-              <ProjectManagerVisual />
+              <p className="mt-2 text-lg font-medium text-white">Foresight</p>
             </div>
 
-            <div className="space-y-6">
-              {projectManagerActivities.map((activity, index) => (
-                <article
-                  key={activity.title}
-                  className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
-                >
-                  <div className="border-b border-white/10 px-6 py-5">
-                    <p className="text-xs text-sky-300">Activity {index + 1}</p>
-                    <h3 className="mt-2 text-xl font-semibold">
-                      {activity.title}
-                    </h3>
-                  </div>
+            <div className="mt-8">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                Credibility anchors
+              </p>
 
-                  <div className="grid xl:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                        Pre-AI
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-300">
-                        {activity.preAi}
-                      </p>
-                    </div>
-
-                    <div className="bg-sky-400/[0.06] p-6">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-                        AI-multiplied
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-200">
-                        {activity.aiMultiplied}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>Cross-functional teams of 8+</li>
+                <li>
+                  Delivery inside complex, multi-project program environments
+                </li>
+                <li>Agile and hybrid sprint execution</li>
+                <li>
+                  Led onshore and offshore test teams and leads through a major
+                  platform migration
+                </li>
+                <li>99.5% accuracy</li>
+                <li>40% testing-efficiency gains</li>
+              </ul>
             </div>
           </div>
 
@@ -898,6 +877,56 @@ export default function Home() {
               That accountability does not delegate to a model.
             </p>
           </div>
+
+          <RoleDisclosure
+            detailId="project-manager-details"
+            roleName="Project Manager"
+          >
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+              The Approach
+            </p>
+            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+              <ProjectManagerVisual />
+
+              <div className="space-y-6">
+                {projectManagerActivities.map((activity, index) => (
+                  <article
+                    key={activity.title}
+                    className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                  >
+                    <div className="border-b border-white/10 px-6 py-5">
+                      <p className="text-xs text-sky-300">
+                        Activity {index + 1}
+                      </p>
+                      <h3 className="mt-2 text-xl font-semibold">
+                        {activity.title}
+                      </h3>
+                    </div>
+
+                    <div className="grid xl:grid-cols-2">
+                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                          Pre-AI
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                          {activity.preAi}
+                        </p>
+                      </div>
+
+                      <div className="bg-sky-400/[0.06] p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                          AI-multiplied
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                          {activity.aiMultiplied}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </RoleDisclosure>
         </div>
       </section>
 
@@ -906,82 +935,42 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
-            <div>
-              <p className="text-sm font-medium text-sky-300">03</p>
+          <div className="max-w-xl">
+            <p className="text-sm font-medium text-sky-300">03</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Program Manager
-              </h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Program Manager
+            </h2>
 
-              <p className="mt-4 text-xl text-slate-300">
-                Coordinating at scale
+            <p className="mt-4 text-xl text-slate-300">
+              Coordinating at scale
+            </p>
+
+            <p className="mt-6 text-base leading-7 text-slate-400">
+              Orchestrates many interdependent projects toward a single
+              enterprise outcome. Success is measured across the whole, not any
+              one part.
+            </p>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                AI-leverage signature
               </p>
-
-              <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">
-                Orchestrates many interdependent projects toward a single
-                enterprise outcome. Success is measured across the whole, not
-                any one part.
+              <p className="mt-2 text-lg font-medium text-white">
+                Coordination
               </p>
-
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  AI-leverage signature
-                </p>
-                <p className="mt-2 text-lg font-medium text-white">
-                  Coordination
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  Credibility anchors
-                </p>
-
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
-                  <li>30–40 interrelated projects</li>
-                  <li>SVP-level governance and prioritization</li>
-                  <li>Executive dashboards in Power BI and Smartsheet</li>
-                </ul>
-              </div>
-
-              <ProgramManagerVisual />
             </div>
 
-            <div className="space-y-6">
-              {programManagerActivities.map((activity, index) => (
-                <article
-                  key={activity.title}
-                  className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
-                >
-                  <div className="border-b border-white/10 px-6 py-5">
-                    <p className="text-xs text-sky-300">Activity {index + 1}</p>
-                    <h3 className="mt-2 text-xl font-semibold">
-                      {activity.title}
-                    </h3>
-                  </div>
+            <div className="mt-8">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                Credibility anchors
+              </p>
 
-                  <div className="grid xl:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                        Pre-AI
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-300">
-                        {activity.preAi}
-                      </p>
-                    </div>
-
-                    <div className="bg-sky-400/[0.04] p-6">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-                        AI-multiplied
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-200">
-                        {activity.aiMultiplied}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>30–40 interrelated projects</li>
+                <li>SVP-level governance and prioritization</li>
+                <li>Executive dashboards in Power BI and Smartsheet</li>
+              </ul>
             </div>
           </div>
 
@@ -997,6 +986,56 @@ export default function Home() {
               information. The program manager coordinates the people.
             </p>
           </div>
+
+          <RoleDisclosure
+            detailId="program-manager-details"
+            roleName="Program Manager"
+          >
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+              The Approach
+            </p>
+            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+              <ProgramManagerVisual />
+
+              <div className="space-y-6">
+                {programManagerActivities.map((activity, index) => (
+                  <article
+                    key={activity.title}
+                    className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
+                  >
+                    <div className="border-b border-white/10 px-6 py-5">
+                      <p className="text-xs text-sky-300">
+                        Activity {index + 1}
+                      </p>
+                      <h3 className="mt-2 text-xl font-semibold">
+                        {activity.title}
+                      </h3>
+                    </div>
+
+                    <div className="grid xl:grid-cols-2">
+                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                          Pre-AI
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                          {activity.preAi}
+                        </p>
+                      </div>
+
+                      <div className="bg-sky-400/[0.04] p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                          AI-multiplied
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                          {activity.aiMultiplied}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </RoleDisclosure>
         </div>
       </section>
 
@@ -1005,84 +1044,42 @@ export default function Home() {
         className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
-            <div>
-              <p className="text-sm font-medium text-sky-300">04</p>
+          <div className="max-w-xl">
+            <p className="text-sm font-medium text-sky-300">04</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-                Portfolio Manager
-              </h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Portfolio Manager
+            </h2>
 
-              <p className="mt-4 text-xl text-slate-300">
-                Allocating the investment
+            <p className="mt-4 text-xl text-slate-300">
+              Allocating the investment
+            </p>
+
+            <p className="mt-6 text-base leading-7 text-slate-400">
+              Decides where finite capital and capacity go across the
+              enterprise. The call carries real money and real consequence.
+            </p>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                AI-leverage signature
               </p>
-
-              <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">
-                Decides where finite capital and capacity go across the
-                enterprise. The call carries real money and real consequence.
+              <p className="mt-2 text-lg font-medium text-white">
+                Decision support
               </p>
-
-              <div className="mt-8 border-t border-white/10 pt-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  AI-leverage signature
-                </p>
-                <p className="mt-2 text-lg font-medium text-white">
-                  Decision support
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
-                  Credibility anchors
-                </p>
-
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
-                  <li>$2M+ portfolio</li>
-                  <li>20–30 concurrent initiatives</li>
-                  <li>
-                    Governance enhancements that cut project delays by 25%
-                  </li>
-                  <li>Influenced multi-million-dollar C-suite decisions</li>
-                </ul>
-              </div>
-
-              <PortfolioManagerVisual />
             </div>
 
-            <div className="space-y-6">
-              {portfolioManagerActivities.map((activity, index) => (
-                <article
-                  key={activity.title}
-                  className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
-                >
-                  <div className="border-b border-white/10 px-6 py-5">
-                    <p className="text-xs text-sky-300">Activity {index + 1}</p>
-                    <h3 className="mt-2 text-xl font-semibold">
-                      {activity.title}
-                    </h3>
-                  </div>
+            <div className="mt-8">
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                Credibility anchors
+              </p>
 
-                  <div className="grid xl:grid-cols-2">
-                    <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                        Pre-AI
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-300">
-                        {activity.preAi}
-                      </p>
-                    </div>
-
-                    <div className="bg-sky-400/[0.06] p-6">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-                        AI-multiplied
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-slate-200">
-                        {activity.aiMultiplied}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+                <li>$2M+ portfolio</li>
+                <li>20–30 concurrent initiatives</li>
+                <li>Governance enhancements that cut project delays by 25%</li>
+                <li>Influenced multi-million-dollar C-suite decisions</li>
+              </ul>
             </div>
           </div>
 
@@ -1098,8 +1095,90 @@ export default function Home() {
               C-suite. AI sharpens the decision. The portfolio leader owns it.
             </p>
           </div>
+
+          <RoleDisclosure
+            detailId="portfolio-manager-details"
+            roleName="Portfolio Manager"
+          >
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+              The Approach
+            </p>
+            <div className="grid gap-10 xl:grid-cols-[0.8fr_1.2fr] xl:gap-16">
+              <PortfolioManagerVisual />
+
+              <div className="space-y-6">
+                {portfolioManagerActivities.map((activity, index) => (
+                  <article
+                    key={activity.title}
+                    className="overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                  >
+                    <div className="border-b border-white/10 px-6 py-5">
+                      <p className="text-xs text-sky-300">
+                        Activity {index + 1}
+                      </p>
+                      <h3 className="mt-2 text-xl font-semibold">
+                        {activity.title}
+                      </h3>
+                    </div>
+
+                    <div className="grid xl:grid-cols-2">
+                      <div className="border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                          Pre-AI
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                          {activity.preAi}
+                        </p>
+                      </div>
+
+                      <div className="bg-sky-400/[0.06] p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                          AI-multiplied
+                        </p>
+                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                          {activity.aiMultiplied}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </RoleDisclosure>
         </div>
       </section>
+
+      <div className="border-b border-white/10 bg-slate-950 px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-2xl border border-sky-300/20 bg-sky-400/[0.06] p-7 sm:p-9">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+            Detailed execution examples
+          </p>
+
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Go deeper into the work.
+          </h2>
+
+          <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
+            Review four representative enterprise programs, showing how they
+            were executed before AI and how I would deliver them today with it.
+          </p>
+
+          <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-5">
+            <a
+              href="/execution-examples.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            >
+              View Detailed Execution Examples
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+            <span className="text-sm font-medium text-slate-400">
+              PDF · 6 pages
+            </span>
+          </div>
+        </div>
+      </div>
 
       <section
         id="founder"
@@ -1163,14 +1242,17 @@ export default function Home() {
               <p className="mt-5 text-base leading-7 text-slate-200">
                 A live multi-sided marketplace, materially more ambitious in
                 scope and architecture than what one founder could reasonably
-                have shipped solo a decade earlier.
+                have shipped solo a decade earlier. As a solo founder, Badou
+                now directs product strategy, architecture, the build, source
+                control, and operational analytics through AI.
               </p>
 
               <p className="mt-6 border-t border-sky-300/15 pt-6 text-sm leading-7 text-slate-300">
-                The same founder instinct, now multiplied: AI compresses the
-                synthesis, drafting, and coordination that once capped a solo
-                builder&apos;s reach, allowing one operator to direct work at a
-                scale that previously required a larger team.
+                The same founder instinct, now multiplied: Badou&apos;s delivery
+                understanding now reaches the implementation layer through
+                end-to-end technical direction, deepening the portfolio-level
+                altitude established by the four-role climb rather than lowering
+                it. A decade later, AI multiplies what one founder can build.
               </p>
             </article>
           </div>
