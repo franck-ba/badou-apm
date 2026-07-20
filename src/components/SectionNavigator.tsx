@@ -105,18 +105,34 @@ export default function SectionNavigator() {
           htmlFor="section-navigator"
         >
           <span className="shrink-0 font-medium text-slate-400">Viewing:</span>
-          <select
-            id="section-navigator"
-            className="min-h-11 min-w-0 flex-1 rounded-lg border border-white/15 bg-slate-900 px-3 py-2 text-sm font-medium text-white outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-300/25"
-            value={activeSection}
-            onChange={handleSelectChange}
-          >
-            {sections.map((section) => (
-              <option key={section.id} value={section.id}>
-                {section.label}
-              </option>
-            ))}
-          </select>
+          <span className="relative min-w-0 flex-1">
+            <select
+              id="section-navigator"
+              className="min-h-11 w-full appearance-none rounded-lg border border-white/15 bg-slate-900 py-2 pl-3 pr-10 text-sm font-medium text-white outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-300/25"
+              value={activeSection}
+              onChange={handleSelectChange}
+            >
+              {sections.map((section) => (
+                <option key={section.id} value={section.id}>
+                  {section.label}
+                </option>
+              ))}
+            </select>
+            <svg
+              className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="m4 6 4 4 4-4"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
         </label>
       </div>
 
