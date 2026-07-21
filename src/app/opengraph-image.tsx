@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Badou Franck — 20 years of technology delivery leadership, multiplied by AI";
+  "Badou Franck: 20 years of technology delivery leadership, multiplied by AI";
 
 export const size = {
   width: 1200,

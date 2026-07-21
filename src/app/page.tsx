@@ -8,14 +8,14 @@ const businessAnalystActivities = [
     preAi:
       "Interview stakeholders across five business lines. Hand-capture notes, manually cluster themes, reconcile where executives contradict each other, draft the BRD, circulate it, absorb feedback, and manage versions. Weeks of cycle time before a single requirement is validated.",
     aiMultiplied:
-      "Auto-transcribe every session. AI clusters themes across all interviews, surfaces where stakeholders want incompatible things, drafts the structured BRD into a standard template, and flags ambiguities and gaps before anything circulates. Days, not weeks—same rigor, compressed.",
+      "Auto-transcribe every session. AI clusters themes across all interviews, surfaces where stakeholders want incompatible things, drafts the structured BRD into a standard template, and flags ambiguities and gaps before anything circulates. Days, not weeks; same rigor, compressed.",
   },
   {
     title: "Documentation & Traceability",
     preAi:
       "Build the requirements traceability matrix by hand. Write functional specifications, map every requirement to acceptance criteria and test cases manually, then keep it all synchronized whenever scope changes.",
     aiMultiplied:
-      "Generate the traceability matrix, first-pass acceptance criteria, and test cases directly from the requirements. When a requirement changes, AI propagates the downstream impact and flags what is now out of sync—no silent gaps.",
+      "Generate the traceability matrix, first-pass acceptance criteria, and test cases directly from the requirements. When a requirement changes, AI propagates the downstream impact and flags what is now out of sync, leaving no silent gaps.",
   },
   {
     title: "Process Analysis & Solution Definition",
@@ -39,7 +39,7 @@ const projectManagerActivities = [
     preAi:
       "Chase the team for updates. Hand-assemble the weekly status deck. Re-translate the same update into different formats for executives versus the working team.",
     aiMultiplied:
-      "AI compiles status directly from the task tracker, drafts both the executive summary and the detailed team version from one source of truth, and tunes tone per audience. The PM reviews and sends — minutes, not hours.",
+      "AI compiles status directly from the task tracker, drafts both the executive summary and the detailed team version from one source of truth, and tunes tone per audience. The PM reviews and sends in minutes, not hours.",
   },
   {
     title: "Risk & Issue Management",
@@ -51,9 +51,9 @@ const projectManagerActivities = [
   {
     title: "Distributed Team & Quality Leadership",
     preAi:
-      "Coordinate onshore and offshore testers and test leads by hand across time zones — allocate work, chase test coverage, reconcile defect reports, and hold the quality bar through a high-stakes migration by sheer vigilance.",
+      "Coordinate onshore and offshore testers and test leads by hand across time zones: allocate work, chase test coverage, reconcile defect reports, and hold the quality bar through a high-stakes migration by sheer vigilance.",
     aiMultiplied:
-      "AI drafts test coverage from requirements, clusters and de-duplicates defect reports across distributed teams, summarizes overnight offshore progress for the morning handoff, and flags coverage gaps before a release — so the lead manages exceptions, not spreadsheets.",
+      "AI drafts test coverage from requirements, clusters and de-duplicates defect reports across distributed teams, summarizes overnight offshore progress for the morning handoff, and flags coverage gaps before a release, so the lead manages exceptions, not spreadsheets.",
   },
 ];
 
@@ -63,14 +63,14 @@ const programManagerActivities = [
     preAi:
       "Manually map dependencies across dozens of projects, chase project managers for status, reconcile conflicting timelines, and hold the collision map in your head or in a sprawling spreadsheet.",
     aiMultiplied:
-      "AI ingests every project plan, maps the full dependency network, and flags where a slip in one project cascades into three others — surfacing the collision weeks before it lands.",
+      "AI ingests every project plan, maps the full dependency network, and flags where a slip in one project cascades into three others, surfacing the collision weeks before it lands.",
   },
   {
     title: "Executive Dashboards & Program Health",
     preAi:
       "Pull data from every project, build the Power BI or Smartsheet dashboard by hand, refresh it each cycle, and write the narrative interpretation for SVP leadership.",
     aiMultiplied:
-      "AI aggregates program data continuously, drafts the health narrative — what is green, what is red, and why — and generates the executive read-out on demand, not once per reporting cycle.",
+      "AI aggregates program data continuously, drafts the health narrative (what is green, what is red, and why), and generates the executive read-out on demand, not once per reporting cycle.",
   },
   {
     title: "Governance & Prioritization Facilitation",
@@ -656,8 +656,8 @@ export default function Home() {
         </p>
 
         <p className="mt-6 max-w-3xl text-base leading-7 text-slate-400 sm:text-lg">
-          I have operated across every altitude of technology delivery—from
-          understanding the problem to allocating enterprise investment—and now
+          I have operated across every altitude of technology delivery, from
+          understanding the problem to allocating enterprise investment, and now
           apply that full range as a founder.
         </p>
 
@@ -760,7 +760,7 @@ export default function Home() {
             </p>
 
             <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
-              Deciding which requirements actually matter to the business—and
+              Deciding which requirements actually matter to the business, and
               reading the room when two executives want incompatible things. AI
               organizes the inputs. The analyst owns the judgment call about
               what&apos;s real.
@@ -834,7 +834,7 @@ export default function Home() {
             <p className="mt-4 text-xl text-slate-300">Delivering the work</p>
 
             <p className="mt-6 text-base leading-7 text-slate-400">
-              Owns a single delivery end to end — scope, schedule, risk,
+              Owns a single delivery end to end: scope, schedule, risk, and
               commitment.
             </p>
 
@@ -972,6 +972,10 @@ export default function Home() {
                 <li>Executive dashboards in Power BI and Smartsheet</li>
               </ul>
             </div>
+
+            <p className="mt-8 border-l-2 border-sky-300/50 pl-5 text-sm leading-6 text-slate-300">
+              I lead people as people to develop, not resources to consume.
+            </p>
           </div>
 
           <div className="mt-12 rounded-2xl border border-sky-300/20 bg-sky-400/[0.06] p-7 sm:p-9">
@@ -980,8 +984,8 @@ export default function Home() {
             </p>
 
             <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
-              Holding the line between competing project owners and executives
-              — the negotiation, coalition-building, and judgment about which
+              Holding the line between competing project owners and executives.
+              The negotiation, coalition-building, and judgment about which
               outcome the program actually exists to serve. AI coordinates the
               information. The program manager coordinates the people.
             </p>
@@ -1081,6 +1085,10 @@ export default function Home() {
                 <li>Influenced multi-million-dollar C-suite decisions</li>
               </ul>
             </div>
+
+            <p className="mt-8 border-l-2 border-sky-300/50 pl-5 text-sm leading-6 text-slate-300">
+              I govern capital as something entrusted, not owned.
+            </p>
           </div>
 
           <div className="mt-12 rounded-2xl border border-sky-300/25 bg-slate-950/70 p-7 sm:p-9">
@@ -1201,7 +1209,7 @@ export default function Home() {
             </p>
 
             <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-400">
-              A separate movement after the climb — not a fifth rung, but all
+              A separate movement after the climb, not a fifth rung, but all
               four altitudes operating at once.
             </p>
           </div>
@@ -1224,8 +1232,8 @@ export default function Home() {
               </p>
 
               <p className="mt-6 border-t border-white/10 pt-6 text-sm leading-7 text-slate-400">
-                Every function that AI now accelerates — synthesis, drafting,
-                coordination, and analysis — was done by hand, by one founder
+                Every function that AI now accelerates (synthesis, drafting,
+                coordination, and analysis) was done by hand, by one founder
                 directing a small team.
               </p>
             </article>
@@ -1254,6 +1262,11 @@ export default function Home() {
                 altitude established by the four-role climb rather than lowering
                 it. A decade later, AI multiplies what one founder can build.
               </p>
+
+              <p className="mt-6 border-l-2 border-sky-300/50 pl-5 text-sm leading-7 text-slate-200">
+                I build platforms where the people they serve have a path to
+                earn and advance.
+              </p>
             </article>
           </div>
 
@@ -1272,8 +1285,8 @@ export default function Home() {
             <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
               The vision, the judgment about what to build and why, and the
               accountability for the whole. AI multiplies a founder&apos;s
-              reach; it does not decide what the company should be. That call —
-              then and now — is Badou&apos;s.
+              reach; it does not decide what the company should be. That call,
+              then and now, is Badou&apos;s.
             </p>
           </div>
         </div>
@@ -1281,7 +1294,7 @@ export default function Home() {
 
       <section
         id="constant"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
@@ -1359,12 +1372,34 @@ export default function Home() {
             </article>
           </div>
 
-          <p className="mt-12 border-l-2 border-sky-300/60 pl-6 text-2xl font-medium leading-9 text-white sm:text-3xl sm:leading-10">
+          <p className="mt-10 max-w-4xl text-lg leading-8 text-slate-300">
+            Integrity shows up in the costly call: the honest recommendation,
+            the hard escalation, and standing behind a decision when it is
+            under fire.
+          </p>
+
+          <p className="mt-8 border-l-2 border-sky-300/60 pl-6 text-2xl font-medium leading-9 text-white sm:text-3xl sm:leading-10">
             AI multiplies the work. It does not inherit the judgment or the
             accountability.
           </p>
         </div>
       </section>
+
+      <div className="border-b border-white/10 bg-slate-950 px-6 py-12 lg:pl-24 lg:pr-8">
+        <div className="mx-auto max-w-7xl rounded-2xl border border-sky-300/20 bg-sky-400/[0.04] p-7 sm:p-9">
+          <p className="max-w-4xl text-base leading-8 text-slate-200 sm:text-lg">
+            The judgment you&apos;ve seen throughout this site doesn&apos;t come
+            from a management framework; it comes from convictions. My faith
+            is the root they grow from. It&apos;s why I see resources as
+            entrusted rather than owned, why I believe every person carries
+            dignity, and why I hold the line on the costly call. It shows up
+            less in what I say and most in how I decide when a decision is hard.
+            I&apos;m also a husband and father, and the people I&apos;m accountable
+            to at home keep me honest about the ones I&apos;m accountable to at
+            work.
+          </p>
+        </div>
+      </div>
 
       <section
         id="contact"
