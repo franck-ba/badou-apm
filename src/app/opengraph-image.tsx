@@ -17,8 +17,8 @@ export default function OpenGraphImage() {
     (
       <div
         style={{
-          background: "#020617",
-          color: "#f8fafc",
+          background: "#f7f9fc",
+          color: "#102a43",
           display: "flex",
           flexDirection: "column",
           height: "100%",
@@ -30,7 +30,7 @@ export default function OpenGraphImage() {
         <div
           style={{
             bottom: 22,
-            border: "1px solid rgba(125, 211, 252, 0.28)",
+            border: "1px solid #d9e3f0",
             display: "flex",
             left: 44,
             position: "absolute",
@@ -48,7 +48,7 @@ export default function OpenGraphImage() {
         >
           <div
             style={{
-              color: "#7dd3fc",
+              color: "#164c96",
               display: "flex",
               fontSize: 23,
               fontWeight: 700,
@@ -59,8 +59,9 @@ export default function OpenGraphImage() {
           </div>
           <div
             style={{
-              border: "1px solid rgba(125, 211, 252, 0.35)",
-              color: "#bae6fd",
+              background: "#eef5ff",
+              border: "1px solid #7ca5d8",
+              color: "#164c96",
               display: "flex",
               fontSize: 15,
               padding: "9px 15px",
@@ -90,7 +91,7 @@ export default function OpenGraphImage() {
           </div>
           <div
             style={{
-              color: "#7dd3fc",
+              color: "#164c96",
               display: "flex",
               fontSize: 50,
               fontWeight: 700,
@@ -105,7 +106,7 @@ export default function OpenGraphImage() {
 
         <div
           style={{
-            color: "#cbd5e1",
+            color: "#334155",
             display: "flex",
             fontSize: 20,
             marginTop: 30,
@@ -134,8 +135,8 @@ export default function OpenGraphImage() {
               <div
                 style={{
                   alignItems: "center",
-                  background: "rgba(14, 165, 233, 0.08)",
-                  border: "1px solid rgba(125, 211, 252, 0.3)",
+                  background: index % 2 === 0 ? "#ffffff" : "#eef5ff",
+                  border: "1px solid #d9e3f0",
                   display: "flex",
                   flex: 1,
                   fontSize: 18,
@@ -148,7 +149,7 @@ export default function OpenGraphImage() {
               {index < progression.length - 1 && (
                 <div
                   style={{
-                    color: "#38bdf8",
+                    color: "#164c96",
                     display: "flex",
                     fontSize: 22,
                     justifyContent: "center",
@@ -164,7 +165,7 @@ export default function OpenGraphImage() {
 
         <div
           style={{
-            color: "#94a3b8",
+            color: "#52657a",
             display: "flex",
             fontSize: 18,
             marginTop: 26,

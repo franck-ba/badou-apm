@@ -23,7 +23,7 @@ export default function RoleDisclosure({
       <button
         id={buttonId}
         type="button"
-        className="inline-flex min-h-11 w-full items-center justify-between gap-4 rounded-xl border border-sky-300/25 bg-sky-400/[0.06] px-5 py-3 text-left font-medium text-white transition hover:border-sky-300/40 hover:bg-sky-400/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:w-auto sm:min-w-72"
+        className="inline-flex min-h-11 w-full items-center justify-between gap-4 rounded-xl border border-control-border bg-ai-surface px-5 py-3 text-left font-medium text-heading transition hover:border-primary hover:bg-section focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page sm:w-auto sm:min-w-72"
         aria-expanded={isExpanded}
         aria-controls={detailId}
         aria-label={`${action} detailed comparison for ${roleName}`}

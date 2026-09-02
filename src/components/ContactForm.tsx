@@ -27,7 +27,7 @@ const initialValues: FormValues = {
 };
 
 const fieldClassName =
-  "mt-2 w-full rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-base text-white outline-none transition placeholder:text-slate-400 focus:border-sky-300 focus:ring-2 focus:ring-sky-300/25";
+  "mt-2 w-full rounded-xl border border-control-border bg-surface px-4 py-3 text-base text-heading outline-none transition placeholder:text-muted focus:border-focus focus:ring-2 focus:ring-focus";
 
 export default function ContactForm() {
   const [values, setValues] = useState<FormValues>(initialValues);
@@ -123,13 +123,13 @@ export default function ContactForm() {
 
   return (
     <form
-      className="rounded-2xl border border-sky-300/20 bg-slate-950/70 p-6 sm:p-8"
+      className="rounded-2xl border border-border bg-surface p-6 shadow-sm shadow-heading/5 sm:p-8"
       onSubmit={handleSubmit}
       noValidate
     >
       {Object.keys(errors).length > 0 && (
         <div
-          className="mb-6 rounded-xl border border-red-300/30 bg-red-400/10 p-4 text-sm text-red-200"
+          className="mb-6 rounded-xl border border-red-400 bg-red-50 p-4 text-sm text-red-800"
           role="alert"
           aria-live="assertive"
         >
@@ -144,7 +144,7 @@ export default function ContactForm() {
 
       {successMessage && (
         <div
-          className="mb-6 rounded-xl border border-sky-300/30 bg-sky-400/10 p-4 text-sm leading-6 text-sky-100"
+          className="mb-6 rounded-xl border border-ai-border bg-ai-surface p-4 text-sm leading-6 text-heading"
           role="status"
           aria-live="polite"
         >
@@ -154,7 +154,7 @@ export default function ContactForm() {
 
       {submissionError && (
         <div
-          className="mb-6 rounded-xl border border-red-300/30 bg-red-400/10 p-4 text-sm text-red-200"
+          className="mb-6 rounded-xl border border-red-400 bg-red-50 p-4 text-sm text-red-800"
           role="alert"
           aria-live="assertive"
         >
@@ -164,7 +164,7 @@ export default function ContactForm() {
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label className="text-sm font-medium text-slate-200" htmlFor="name">
+          <label className="text-sm font-medium text-heading" htmlFor="name">
             Name
           </label>
           <input
@@ -184,7 +184,7 @@ export default function ContactForm() {
             aria-describedby={errors.name ? "name-error" : undefined}
           />
           {errors.name && (
-            <p id="name-error" className="mt-2 text-sm text-red-300">
+            <p id="name-error" className="mt-2 text-sm text-red-700">
               {errors.name}
             </p>
           )}
@@ -192,7 +192,7 @@ export default function ContactForm() {
 
         <div>
           <label
-            className="text-sm font-medium text-slate-200"
+            className="text-sm font-medium text-heading"
             htmlFor="email"
           >
             Work email
@@ -214,7 +214,7 @@ export default function ContactForm() {
             aria-describedby={errors.email ? "email-error" : undefined}
           />
           {errors.email && (
-            <p id="email-error" className="mt-2 text-sm text-red-300">
+            <p id="email-error" className="mt-2 text-sm text-red-700">
               {errors.email}
             </p>
           )}
@@ -223,10 +223,10 @@ export default function ContactForm() {
 
       <div className="mt-6">
         <label
-          className="text-sm font-medium text-slate-200"
+          className="text-sm font-medium text-heading"
           htmlFor="phone"
         >
-          Phone number <span className="text-slate-400">(optional)</span>
+          Phone number <span className="text-muted">(optional)</span>
         </label>
         <input
           className={fieldClassName}
@@ -244,10 +244,10 @@ export default function ContactForm() {
 
       <div className="mt-6">
         <label
-          className="text-sm font-medium text-slate-200"
+          className="text-sm font-medium text-heading"
           htmlFor="organization"
         >
-          Organization <span className="text-slate-400">(optional)</span>
+          Organization <span className="text-muted">(optional)</span>
         </label>
         <input
           className={fieldClassName}
@@ -265,7 +265,7 @@ export default function ContactForm() {
 
       <div className="mt-6">
         <label
-          className="text-sm font-medium text-slate-200"
+          className="text-sm font-medium text-heading"
           htmlFor="conversation-type"
         >
           What would you like to discuss?
@@ -301,7 +301,7 @@ export default function ContactForm() {
         {errors.conversationType && (
           <p
             id="conversation-type-error"
-            className="mt-2 text-sm text-red-300"
+            className="mt-2 text-sm text-red-700"
           >
             {errors.conversationType}
           </p>
@@ -310,7 +310,7 @@ export default function ContactForm() {
 
       <div className="mt-6">
         <label
-          className="text-sm font-medium text-slate-200"
+          className="text-sm font-medium text-heading"
           htmlFor="message"
         >
           Message
@@ -332,12 +332,12 @@ export default function ContactForm() {
             errors.message ? "message-help message-error" : "message-help"
           }
         />
-        <p id="message-help" className="mt-2 text-sm text-slate-400">
+        <p id="message-help" className="mt-2 text-sm text-muted">
           Share the challenge, context, and desired outcome. 20–5,000
           characters.
         </p>
         {errors.message && (
-          <p id="message-error" className="mt-2 text-sm text-red-300">
+          <p id="message-error" className="mt-2 text-sm text-red-700">
             {errors.message}
           </p>
         )}
@@ -363,9 +363,9 @@ export default function ContactForm() {
       </div>
 
       <div className="mt-6">
-        <label className="flex items-start gap-3 text-sm leading-6 text-slate-300">
+        <label className="flex items-start gap-3 text-sm leading-6 text-body">
           <input
-            className="mt-1 h-4 w-4 shrink-0 accent-sky-400 outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-slate-950"
+            className="mt-1 h-4 w-4 shrink-0 accent-primary outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2 focus:ring-offset-surface"
             name="consent"
             ref={consentRef}
             type="checkbox"
@@ -382,14 +382,14 @@ export default function ContactForm() {
           </span>
         </label>
         {errors.consent && (
-          <p id="consent-error" className="mt-2 text-sm text-red-300">
+          <p id="consent-error" className="mt-2 text-sm text-red-700">
             {errors.consent}
           </p>
         )}
       </div>
 
       <button
-        className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-focus focus:ring-offset-2 focus:ring-offset-surface disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
         type="submit"
         disabled={isSubmitting}
       >

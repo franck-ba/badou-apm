@@ -145,18 +145,18 @@ function BusinessAnalystVisual() {
   ];
 
   return (
-    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-ai-border bg-surface">
       <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="min-w-0 rounded-xl border border-white/10 bg-slate-900/70 p-4">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <div className="min-w-0 rounded-xl border border-border bg-section p-4">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                 {stage.label}
               </p>
-              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
+              <ul className="mt-4 space-y-2 text-sm leading-5 text-body">
                 {stage.items.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="text-sky-300" aria-hidden="true">
+                    <span className="text-primary" aria-hidden="true">
                       •
                     </span>
                     <span>{item}</span>
@@ -167,7 +167,7 @@ function BusinessAnalystVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
+                className="hidden items-center justify-center px-1 text-primary xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -177,20 +177,20 @@ function BusinessAnalystVisual() {
         ))}
       </div>
 
-      <div className="grid border-t border-sky-300/20 sm:grid-cols-3">
+      <div className="grid border-t border-ai-border sm:grid-cols-3">
         {comparison.map((item, index) => (
           <div
             key={item.label}
             className={`p-4 sm:p-5 ${
               index > 0
-                ? "border-t border-white/10 sm:border-l sm:border-t-0"
+                ? "border-t border-border sm:border-l sm:border-t-0"
                 : ""
             }`}
           >
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               {item.label}
             </p>
-            <p className="mt-2 text-sm leading-5 text-slate-200">
+            <p className="mt-2 text-sm leading-5 text-body">
               {item.detail}
             </p>
           </div>
@@ -232,18 +232,18 @@ function ProjectManagerVisual() {
   ];
 
   return (
-    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-ai-border bg-section">
       <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="min-w-0 rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <div className="min-w-0 rounded-xl border border-ai-border bg-surface p-4">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                 {stage.label}
               </p>
-              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
+              <ul className="mt-4 space-y-2 text-sm leading-5 text-body">
                 {stage.items.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="text-sky-300" aria-hidden="true">
+                    <span className="text-primary" aria-hidden="true">
                       •
                     </span>
                     <span>{item}</span>
@@ -254,7 +254,7 @@ function ProjectManagerVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
+                className="hidden items-center justify-center px-1 text-primary xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -264,20 +264,20 @@ function ProjectManagerVisual() {
         ))}
       </div>
 
-      <div className="grid border-t border-sky-300/25 sm:grid-cols-3">
+      <div className="grid border-t border-ai-border sm:grid-cols-3">
         {comparison.map((item, index) => (
           <div
             key={item.label}
             className={`p-4 sm:p-5 ${
               index > 0
-                ? "border-t border-white/10 sm:border-l sm:border-t-0"
+                ? "border-t border-border sm:border-l sm:border-t-0"
                 : ""
             }`}
           >
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               {item.label}
             </p>
-            <p className="mt-2 text-sm leading-5 text-slate-200">
+            <p className="mt-2 text-sm leading-5 text-body">
               {item.detail}
             </p>
           </div>
@@ -327,18 +327,18 @@ function ProgramManagerVisual() {
   ];
 
   return (
-    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/20 bg-slate-950/80">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-ai-border bg-surface">
       <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="min-w-0 rounded-xl border border-white/10 bg-slate-900/70 p-4">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <div className="min-w-0 rounded-xl border border-border bg-section p-4">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                 {stage.label}
               </p>
-              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
+              <ul className="mt-4 space-y-2 text-sm leading-5 text-body">
                 {stage.items.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="text-sky-300" aria-hidden="true">
+                    <span className="text-primary" aria-hidden="true">
                       •
                     </span>
                     <span>{item}</span>
@@ -349,7 +349,7 @@ function ProgramManagerVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
+                className="hidden items-center justify-center px-1 text-primary xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -359,20 +359,20 @@ function ProgramManagerVisual() {
         ))}
       </div>
 
-      <div className="grid border-t border-sky-300/20 sm:grid-cols-3">
+      <div className="grid border-t border-ai-border sm:grid-cols-3">
         {comparison.map((item, index) => (
           <div
             key={item.label}
             className={`p-4 sm:p-5 ${
               index > 0
-                ? "border-t border-white/10 sm:border-l sm:border-t-0"
+                ? "border-t border-border sm:border-l sm:border-t-0"
                 : ""
             }`}
           >
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               {item.label}
             </p>
-            <p className="mt-2 text-sm leading-5 text-slate-200">
+            <p className="mt-2 text-sm leading-5 text-body">
               {item.detail}
             </p>
           </div>
@@ -418,18 +418,18 @@ function PortfolioManagerVisual() {
   ];
 
   return (
-    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-900/90">
+    <div className="min-w-0 w-full overflow-hidden rounded-2xl border border-ai-border bg-section">
       <div className="grid min-w-0 gap-3 p-4 sm:p-5 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] xl:items-stretch">
         {stages.map((stage, index) => (
           <div key={stage.label} className="contents">
-            <div className="min-w-0 rounded-xl border border-sky-300/15 bg-slate-950/80 p-4">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <div className="min-w-0 rounded-xl border border-ai-border bg-surface p-4">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                 {stage.label}
               </p>
-              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
+              <ul className="mt-4 space-y-2 text-sm leading-5 text-body">
                 {stage.items.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="text-sky-300" aria-hidden="true">
+                    <span className="text-primary" aria-hidden="true">
                       •
                     </span>
                     <span>{item}</span>
@@ -440,7 +440,7 @@ function PortfolioManagerVisual() {
 
             {index < stages.length - 1 && (
               <div
-                className="hidden items-center justify-center px-1 text-sky-300 xl:flex"
+                className="hidden items-center justify-center px-1 text-primary xl:flex"
                 aria-hidden="true"
               >
                 →
@@ -450,20 +450,20 @@ function PortfolioManagerVisual() {
         ))}
       </div>
 
-      <div className="grid border-t border-sky-300/25 sm:grid-cols-3">
+      <div className="grid border-t border-ai-border sm:grid-cols-3">
         {comparison.map((item, index) => (
           <div
             key={item.label}
             className={`p-4 sm:p-5 ${
               index > 0
-                ? "border-t border-white/10 sm:border-l sm:border-t-0"
+                ? "border-t border-border sm:border-l sm:border-t-0"
                 : ""
             }`}
           >
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               {item.label}
             </p>
-            <p className="mt-2 text-sm leading-5 text-slate-200">
+            <p className="mt-2 text-sm leading-5 text-body">
               {item.detail}
             </p>
           </div>
@@ -475,36 +475,36 @@ function PortfolioManagerVisual() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-page text-heading">
       <a
         href="#main-content"
-        className="sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:not-sr-only focus:rounded-md focus:bg-sky-300 focus:px-4 focus:py-3 focus:font-semibold focus:text-slate-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-950"
+        className="sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:not-sr-only focus:rounded-md focus:bg-primary-hover focus:px-4 focus:py-3 focus:font-semibold focus:text-white focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2 focus:ring-offset-page"
       >
         Skip to main content
       </a>
 
-      <header className="border-b border-white/10">
+      <header className="border-b border-border bg-surface">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
           <a
             href="#top"
-            className="rounded-sm text-lg font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="rounded-sm text-lg font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
             aria-label="Badou Franck home"
           >
             Badou Franck
           </a>
 
           <nav
-            className="hidden items-center gap-5 text-sm text-slate-300 md:flex lg:gap-8"
+            className="hidden items-center gap-5 text-sm text-body md:flex lg:gap-8"
             aria-label="Primary navigation"
           >
             <a
-              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="rounded-sm transition hover:text-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
               href="#work"
             >
               How I Deliver
             </a>
             <a
-              className="rounded-sm border-b border-sky-300/50 pb-1 font-medium text-sky-300 transition hover:border-sky-200 hover:text-sky-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="rounded-sm border-b border-ai-border pb-1 font-medium text-primary transition hover:border-primary hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
               href="/execution-examples.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -513,13 +513,13 @@ export default function Home() {
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
             <a
-              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="rounded-sm transition hover:text-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
               href="#founder"
             >
               Proving Ground
             </a>
             <a
-              className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="rounded-sm transition hover:text-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
               href="#contact"
             >
               Contact
@@ -528,7 +528,7 @@ export default function Home() {
 
           <a
             href="#contact"
-            className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-950 transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
           >
             Start a Conversation
           </a>
@@ -542,7 +542,7 @@ export default function Home() {
         id="top"
         className="mx-auto flex min-h-[calc(100vh-81px)] max-w-7xl scroll-mt-20 flex-col justify-center px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
-        <p className="max-w-4xl text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+        <p className="max-w-4xl text-sm font-medium uppercase tracking-[0.18em] text-primary">
           Business Analyst · Project Manager · Program Manager · Portfolio
           Manager
         </p>
@@ -551,11 +551,11 @@ export default function Home() {
           20 years mastering how the work gets done. Now rebuilding it with AI.
         </h1>
 
-        <p className="mt-8 max-w-2xl text-xl leading-8 text-slate-300 sm:text-2xl">
+        <p className="mt-8 max-w-2xl text-xl leading-8 text-body sm:text-2xl">
           AI multiplies the work; the judgment stays mine.
         </p>
 
-        <p className="mt-6 max-w-3xl text-base leading-7 text-slate-400 sm:text-lg">
+        <p className="mt-6 max-w-3xl text-base leading-7 text-muted sm:text-lg">
           I have operated across every altitude of technology delivery, from
           understanding the problem to allocating enterprise investment, and I
           stay current by applying that full range in real product builds.
@@ -564,27 +564,27 @@ export default function Home() {
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
             href="#work"
-            className="inline-flex items-center justify-center rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
           >
             See How I Deliver
           </a>
 
           <a
             href="#founder"
-            className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white transition hover:border-white/40 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            className="inline-flex items-center justify-center rounded-full border border-control-border bg-surface px-6 py-3 font-medium text-primary transition hover:border-primary hover:bg-section focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
           >
             See the Proving Ground
           </a>
         </div>
 
-        <div className="mt-16 grid gap-3 border-t border-white/10 pt-8 sm:grid-cols-4">
+        <div className="mt-16 grid gap-3 border-t border-border pt-8 sm:grid-cols-4">
           {["Understand", "Deliver", "Coordinate", "Allocate"].map(
             (step, index) => (
               <div key={step} className="flex items-center gap-3">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-sky-300/40 text-xs text-sky-300">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-ai-border text-xs text-primary">
                   {index + 1}
                 </span>
-                <span className="text-sm font-medium text-slate-200">
+                <span className="text-sm font-medium text-body">
                   {step}
                 </span>
               </div>
@@ -595,10 +595,10 @@ export default function Home() {
 
       <section
         id="work"
-        className="scroll-mt-20 border-y border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-y border-border bg-section px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
             The accountability climb
           </p>
 
@@ -610,43 +610,43 @@ export default function Home() {
 
       <section
         id="business-analyst"
-        className="scroll-mt-20 border-b border-white/10 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
+        className="scroll-mt-20 border-b border-border px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
-            <p className="text-sm font-medium text-sky-300">01</p>
+            <p className="text-sm font-medium text-primary">01</p>
 
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Business Analyst
             </h2>
 
-            <p className="mt-4 text-xl text-slate-300">
+            <p className="mt-4 text-xl text-body">
               Understanding the problem
             </p>
 
-            <p className="mt-6 text-base leading-7 text-slate-400">
+            <p className="mt-6 text-base leading-7 text-muted">
               Closest to the work. Translating organizational ambiguity into
               precise specification. If the analyst gets this wrong, everything
               built downstream is wrong.
             </p>
 
-            <div className="mt-8 border-t border-white/10 pt-6">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+            <div className="mt-8 border-t border-border pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 AI-leverage signature
               </p>
-              <p className="mt-2 text-lg font-medium text-white">Synthesis</p>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
+              <p className="mt-2 text-lg font-medium text-heading">Synthesis</p>
+              <p className="mt-3 text-sm leading-6 text-muted">
                 Turning scattered, contradictory human input into a coherent,
                 structured picture.
               </p>
             </div>
 
             <div className="mt-8">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 Credibility anchors
               </p>
 
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-body">
                 <li>Requirements across five business lines</li>
                 <li>75% reduction in documentation cycle time</li>
                 <li>15% improvement in claims processing efficiency</li>
@@ -654,12 +654,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-sky-300/20 bg-sky-400/[0.06] p-7 sm:p-9">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+          <div className="mt-12 rounded-2xl border border-ai-border bg-ai-surface p-7 sm:p-9">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               What stays human
             </p>
 
-            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
+            <p className="mt-4 max-w-5xl text-xl leading-8 text-heading sm:text-2xl">
               Deciding which requirements actually matter to the business, and
               reading the room when two executives want incompatible things. AI
               organizes the inputs. The analyst owns the judgment call about
@@ -671,7 +671,7 @@ export default function Home() {
             detailId="business-analyst-details"
             roleName="Business Analyst"
           >
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-primary">
               The Approach
             </p>
             <div className="grid min-w-0 gap-10">
@@ -681,10 +681,10 @@ export default function Home() {
                 {businessAnalystActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-border bg-section"
                   >
-                    <div className="border-b border-white/10 px-6 py-5">
-                      <p className="text-xs text-sky-300">
+                    <div className="border-b border-border px-6 py-5">
+                      <p className="text-xs text-primary">
                         Activity {index + 1}
                       </p>
                       <h3 className="mt-2 text-xl font-semibold">
@@ -693,20 +693,20 @@ export default function Home() {
                     </div>
 
                     <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                      <div className="min-w-0 border-b border-border p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
                           Pre-AI
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.preAi}
                         </p>
                       </div>
 
-                      <div className="min-w-0 bg-sky-400/[0.04] p-6">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                      <div className="min-w-0 bg-ai-surface p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                           AI-multiplied
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.aiMultiplied}
                         </p>
                       </div>
@@ -721,36 +721,36 @@ export default function Home() {
 
       <section
         id="project-manager"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
+        className="scroll-mt-20 border-b border-border bg-section px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
-            <p className="text-sm font-medium text-sky-300">02</p>
+            <p className="text-sm font-medium text-primary">02</p>
 
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Project Manager
             </h2>
 
-            <p className="mt-4 text-xl text-slate-300">Delivering the work</p>
+            <p className="mt-4 text-xl text-body">Delivering the work</p>
 
-            <p className="mt-6 text-base leading-7 text-slate-400">
+            <p className="mt-6 text-base leading-7 text-muted">
               Owns a single delivery end to end: scope, schedule, risk, and
               commitment.
             </p>
 
-            <div className="mt-8 border-t border-white/10 pt-6">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+            <div className="mt-8 border-t border-border pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 AI-leverage signature
               </p>
-              <p className="mt-2 text-lg font-medium text-white">Foresight</p>
+              <p className="mt-2 text-lg font-medium text-heading">Foresight</p>
             </div>
 
             <div className="mt-8">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 Credibility anchors
               </p>
 
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-body">
                 <li>Cross-functional teams of 8+</li>
                 <li>
                   Delivery inside complex, multi-project program environments
@@ -766,12 +766,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-sky-300/25 bg-slate-950/70 p-7 sm:p-9">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+          <div className="mt-12 rounded-2xl border border-ai-border bg-surface p-7 sm:p-9">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               What stays human
             </p>
 
-            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
+            <p className="mt-4 max-w-5xl text-xl leading-8 text-heading sm:text-2xl">
               Owning the commitment. When to escalate, when to absorb, when to
               hold the line on scope, and when to have the hard conversation.
               That accountability does not delegate to a model.
@@ -782,7 +782,7 @@ export default function Home() {
             detailId="project-manager-details"
             roleName="Project Manager"
           >
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-primary">
               The Approach
             </p>
             <div className="grid min-w-0 gap-10">
@@ -792,10 +792,10 @@ export default function Home() {
                 {projectManagerActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="min-w-0 overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-ai-border bg-surface"
                   >
-                    <div className="border-b border-white/10 px-6 py-5">
-                      <p className="text-xs text-sky-300">
+                    <div className="border-b border-border px-6 py-5">
+                      <p className="text-xs text-primary">
                         Activity {index + 1}
                       </p>
                       <h3 className="mt-2 text-xl font-semibold">
@@ -804,20 +804,20 @@ export default function Home() {
                     </div>
 
                     <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                      <div className="min-w-0 border-b border-border p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
                           Pre-AI
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.preAi}
                         </p>
                       </div>
 
-                      <div className="min-w-0 bg-sky-400/[0.06] p-6">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                      <div className="min-w-0 bg-ai-surface p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                           AI-multiplied
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.aiMultiplied}
                         </p>
                       </div>
@@ -832,58 +832,58 @@ export default function Home() {
 
       <section
         id="program-manager"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
+        className="scroll-mt-20 border-b border-border bg-surface px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
-            <p className="text-sm font-medium text-sky-300">03</p>
+            <p className="text-sm font-medium text-primary">03</p>
 
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Program Manager
             </h2>
 
-            <p className="mt-4 text-xl text-slate-300">
+            <p className="mt-4 text-xl text-body">
               Coordinating at scale
             </p>
 
-            <p className="mt-6 text-base leading-7 text-slate-400">
+            <p className="mt-6 text-base leading-7 text-muted">
               Orchestrates many interdependent projects toward a single
               enterprise outcome. Success is measured across the whole, not any
               one part.
             </p>
 
-            <div className="mt-8 border-t border-white/10 pt-6">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+            <div className="mt-8 border-t border-border pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 AI-leverage signature
               </p>
-              <p className="mt-2 text-lg font-medium text-white">
+              <p className="mt-2 text-lg font-medium text-heading">
                 Coordination
               </p>
             </div>
 
             <div className="mt-8">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 Credibility anchors
               </p>
 
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-body">
                 <li>30–40 interrelated projects</li>
                 <li>SVP-level governance and prioritization</li>
                 <li>Executive dashboards in Power BI and Smartsheet</li>
               </ul>
             </div>
 
-            <p className="mt-8 border-l-2 border-sky-300/50 pl-5 text-sm leading-6 text-slate-300">
+            <p className="mt-8 border-l-2 border-ai-border pl-5 text-sm leading-6 text-body">
               I lead people as people to develop, not resources to consume.
             </p>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-sky-300/20 bg-sky-400/[0.06] p-7 sm:p-9">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+          <div className="mt-12 rounded-2xl border border-ai-border bg-ai-surface p-7 sm:p-9">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               What stays human
             </p>
 
-            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
+            <p className="mt-4 max-w-5xl text-xl leading-8 text-heading sm:text-2xl">
               Holding the line between competing project owners and executives.
               The negotiation, coalition-building, and judgment about which
               outcome the program actually exists to serve. AI coordinates the
@@ -895,7 +895,7 @@ export default function Home() {
             detailId="program-manager-details"
             roleName="Program Manager"
           >
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-primary">
               The Approach
             </p>
             <div className="grid min-w-0 gap-10">
@@ -905,10 +905,10 @@ export default function Home() {
                 {programManagerActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-border bg-section"
                   >
-                    <div className="border-b border-white/10 px-6 py-5">
-                      <p className="text-xs text-sky-300">
+                    <div className="border-b border-border px-6 py-5">
+                      <p className="text-xs text-primary">
                         Activity {index + 1}
                       </p>
                       <h3 className="mt-2 text-xl font-semibold">
@@ -917,20 +917,20 @@ export default function Home() {
                     </div>
 
                     <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                      <div className="min-w-0 border-b border-border p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
                           Pre-AI
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.preAi}
                         </p>
                       </div>
 
-                      <div className="min-w-0 bg-sky-400/[0.04] p-6">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                      <div className="min-w-0 bg-ai-surface p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                           AI-multiplied
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.aiMultiplied}
                         </p>
                       </div>
@@ -945,40 +945,40 @@ export default function Home() {
 
       <section
         id="portfolio-manager"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
+        className="scroll-mt-20 border-b border-border bg-section px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
           <div className="max-w-xl">
-            <p className="text-sm font-medium text-sky-300">04</p>
+            <p className="text-sm font-medium text-primary">04</p>
 
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Portfolio Manager
             </h2>
 
-            <p className="mt-4 text-xl text-slate-300">
+            <p className="mt-4 text-xl text-body">
               Allocating the investment
             </p>
 
-            <p className="mt-6 text-base leading-7 text-slate-400">
+            <p className="mt-6 text-base leading-7 text-muted">
               Decides where finite capital and capacity go across the
               enterprise. The call carries real money and real consequence.
             </p>
 
-            <div className="mt-8 border-t border-white/10 pt-6">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+            <div className="mt-8 border-t border-border pt-6">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 AI-leverage signature
               </p>
-              <p className="mt-2 text-lg font-medium text-white">
+              <p className="mt-2 text-lg font-medium text-heading">
                 Decision support
               </p>
             </div>
 
             <div className="mt-8">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+              <p className="text-xs uppercase tracking-[0.16em] text-muted">
                 Credibility anchors
               </p>
 
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-body">
                 <li>$2M+ portfolio</li>
                 <li>20–30 concurrent initiatives</li>
                 <li>Governance enhancements that cut project delays by 25%</li>
@@ -986,17 +986,17 @@ export default function Home() {
               </ul>
             </div>
 
-            <p className="mt-8 border-l-2 border-sky-300/50 pl-5 text-sm leading-6 text-slate-300">
+            <p className="mt-8 border-l-2 border-ai-border pl-5 text-sm leading-6 text-body">
               I govern capital as something entrusted, not owned.
             </p>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-sky-300/25 bg-slate-950/70 p-7 sm:p-9">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+          <div className="mt-12 rounded-2xl border border-ai-border bg-surface p-7 sm:p-9">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
               What stays human
             </p>
 
-            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
+            <p className="mt-4 max-w-5xl text-xl leading-8 text-heading sm:text-2xl">
               The allocation call itself. Which bets the enterprise makes with
               finite capital, when to kill a sunk-cost initiative, and standing
               behind a multi-million-dollar recommendation in front of the
@@ -1008,7 +1008,7 @@ export default function Home() {
             detailId="portfolio-manager-details"
             roleName="Portfolio Manager"
           >
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.18em] text-primary">
               The Approach
             </p>
             <div className="grid min-w-0 gap-10">
@@ -1018,10 +1018,10 @@ export default function Home() {
                 {portfolioManagerActivities.map((activity, index) => (
                   <article
                     key={activity.title}
-                    className="min-w-0 overflow-hidden rounded-2xl border border-sky-300/15 bg-slate-950/70"
+                    className="min-w-0 overflow-hidden rounded-2xl border border-ai-border bg-surface"
                   >
-                    <div className="border-b border-white/10 px-6 py-5">
-                      <p className="text-xs text-sky-300">
+                    <div className="border-b border-border px-6 py-5">
+                      <p className="text-xs text-primary">
                         Activity {index + 1}
                       </p>
                       <h3 className="mt-2 text-xl font-semibold">
@@ -1030,20 +1030,20 @@ export default function Home() {
                     </div>
 
                     <div className="grid min-w-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-                      <div className="min-w-0 border-b border-white/10 p-6 xl:border-b-0 xl:border-r">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                      <div className="min-w-0 border-b border-border p-6 xl:border-b-0 xl:border-r">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
                           Pre-AI
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-300">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.preAi}
                         </p>
                       </div>
 
-                      <div className="min-w-0 bg-sky-400/[0.06] p-6">
-                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                      <div className="min-w-0 bg-ai-surface p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                           AI-multiplied
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-200">
+                        <p className="mt-4 text-sm leading-7 text-body">
                           {activity.aiMultiplied}
                         </p>
                       </div>
@@ -1056,17 +1056,17 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="border-b border-white/10 bg-slate-950 px-6 py-16 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-2xl border border-sky-300/20 bg-sky-400/[0.06] p-7 sm:p-9">
-          <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+      <div className="border-b border-border bg-surface px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-2xl border border-ai-border bg-ai-surface p-7 sm:p-9">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
             Detailed execution examples
           </p>
 
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-heading sm:text-4xl">
             Go deeper into the work.
           </h2>
 
-          <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
+          <p className="mt-5 max-w-3xl text-base leading-7 text-body sm:text-lg">
             Review four representative enterprise programs, showing how they
             were executed before AI and how I would deliver them today with it.
           </p>
@@ -1076,12 +1076,12 @@ export default function Home() {
               href="/execution-examples.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center justify-center rounded-full bg-sky-400 px-6 py-3 font-medium text-slate-950 transition hover:bg-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
             >
               View Detailed Execution Examples
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
-            <span className="text-sm font-medium text-slate-400">
+            <span className="text-sm font-medium text-muted">
               PDF · 6 pages
             </span>
           </div>
@@ -1090,19 +1090,19 @@ export default function Home() {
 
       <section
         id="founder"
-        className="scroll-mt-20 border-b border-white/10 bg-sky-400/[0.03] px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-b border-border bg-ai-surface px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="border-l-2 border-sky-300/50 pl-5 sm:pl-7">
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+          <div className="border-l-2 border-ai-border pl-5 sm:pl-7">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
               The Proving Ground
             </p>
 
-            <p className="mt-4 max-w-3xl text-xl italic leading-8 text-white sm:text-2xl">
+            <p className="mt-4 max-w-3xl text-xl italic leading-8 text-heading sm:text-2xl">
               Where I learn the technology I lead — by shipping it.
             </p>
 
-            <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">
+            <p className="mt-6 max-w-4xl text-lg leading-8 text-body">
               For twenty years I&apos;ve led delivery from the analyst&apos;s seat up
               to the portfolio. But leading technology and understanding it
               from the inside are different things, and I&apos;ve never been willing
@@ -1113,19 +1113,19 @@ export default function Home() {
             </p>
           </div>
 
-          <details className="group mt-12 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/70">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-7 text-xl font-semibold text-white marker:hidden sm:p-9 sm:text-2xl">
+          <details className="group mt-12 overflow-hidden rounded-2xl border border-control-border bg-surface">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-7 text-xl font-semibold text-heading marker:hidden sm:p-9 sm:text-2xl">
               Origin Story
               <span
-                className="text-sky-300 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                className="text-primary transition-transform group-open:rotate-180 motion-reduce:transition-none"
                 aria-hidden="true"
               >
                 ↓
               </span>
             </summary>
 
-            <div className="space-y-6 border-t border-white/10 px-7 pb-7 pt-6 text-base leading-7 text-slate-300 sm:px-9 sm:pb-9">
-              <h3 className="text-lg font-semibold leading-7 text-white">
+            <div className="space-y-6 border-t border-border px-7 pb-7 pt-6 text-base leading-7 text-body sm:px-9 sm:pb-9">
+              <h3 className="text-lg font-semibold leading-7 text-heading">
                 It started with one recruiter running an agency on Gmail,
                 Google Sheets, and a cell phone.
               </h3>
@@ -1143,7 +1143,7 @@ export default function Home() {
                 technology infrastructure for recruiting agencies who don&apos;t
                 have a technology department because they are the department.
               </p>
-              <h3 className="pt-2 text-lg font-semibold leading-7 text-white">
+              <h3 className="pt-2 text-lg font-semibold leading-7 text-heading">
                 Then she changed roles, and I got a second problem to solve.
               </h3>
               <p>
@@ -1164,18 +1164,18 @@ export default function Home() {
             </div>
           </details>
 
-          <details className="group mt-6 overflow-hidden rounded-2xl border border-sky-300/25 bg-sky-400/[0.06]">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-7 text-xl font-semibold text-white marker:hidden sm:p-9 sm:text-2xl">
+          <details className="group mt-6 overflow-hidden rounded-2xl border border-primary bg-ai-surface">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-7 text-xl font-semibold text-heading marker:hidden sm:p-9 sm:text-2xl">
               Pre-AI vs. AI-Multiplied Comparison
               <span
-                className="text-sky-300 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                className="text-primary transition-transform group-open:rotate-180 motion-reduce:transition-none"
                 aria-hidden="true"
               >
                 ↓
               </span>
             </summary>
 
-            <div className="border-t border-sky-300/15 px-4 pb-7 pt-6 sm:px-7 sm:pb-9 lg:px-9">
+            <div className="border-t border-ai-border px-4 pb-7 pt-6 sm:px-7 sm:pb-9 lg:px-9">
               <div className="space-y-4 sm:hidden">
                 {[
                   [
@@ -1206,24 +1206,24 @@ export default function Home() {
                 ].map(([dimension, careVizor, topCloserR]) => (
                   <article
                     key={dimension}
-                    className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/70"
+                    className="overflow-hidden rounded-xl border border-border bg-surface"
                   >
-                    <h3 className="border-b border-white/10 px-5 py-4 font-semibold text-white">
+                    <h3 className="border-b border-border px-5 py-4 font-semibold text-heading">
                       {dimension}
                     </h3>
                     <div className="space-y-2 px-5 py-4">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
                         CareVizor (2014–2016)
                       </p>
-                      <p className="text-sm leading-6 text-slate-300">
+                      <p className="text-sm leading-6 text-body">
                         {careVizor}
                       </p>
                     </div>
-                    <div className="space-y-2 border-t border-sky-300/15 bg-sky-400/[0.06] px-5 py-4">
-                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                    <div className="space-y-2 border-t border-ai-border bg-ai-surface px-5 py-4">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                         TopCloserR (2025–present)
                       </p>
-                      <p className="text-sm leading-6 text-slate-200">
+                      <p className="text-sm leading-6 text-body">
                         {topCloserR}
                       </p>
                     </div>
@@ -1231,22 +1231,22 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="hidden overflow-hidden rounded-xl border border-white/10 sm:block">
+              <div className="hidden overflow-hidden rounded-xl border border-border sm:block">
                 <table className="w-full table-fixed border-collapse text-left">
-                  <thead className="bg-slate-950/80">
+                  <thead className="bg-surface">
                     <tr>
-                      <th className="w-1/5 px-4 py-4 text-sm font-semibold text-white lg:px-5">
+                      <th className="w-1/5 px-4 py-4 text-sm font-semibold text-heading lg:px-5">
                         Dimension
                       </th>
-                      <th className="w-2/5 border-l border-white/10 px-4 py-4 text-sm font-semibold text-white lg:px-5">
+                      <th className="w-2/5 border-l border-border px-4 py-4 text-sm font-semibold text-heading lg:px-5">
                         CareVizor (2014–2016)
                       </th>
-                      <th className="w-2/5 border-l border-sky-300/15 bg-sky-400/[0.06] px-4 py-4 text-sm font-semibold text-sky-300 lg:px-5">
+                      <th className="w-2/5 border-l border-ai-border bg-ai-surface px-4 py-4 text-sm font-semibold text-primary lg:px-5">
                         TopCloserR (2025–present)
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-white/10">
+                  <tbody className="divide-y divide-border">
                     {[
                       [
                         "The build",
@@ -1275,13 +1275,13 @@ export default function Home() {
                       ],
                     ].map(([dimension, careVizor, topCloserR]) => (
                       <tr key={dimension} className="align-top">
-                        <th className="bg-slate-950/70 px-4 py-4 text-sm font-semibold text-white lg:px-5">
+                        <th className="bg-surface px-4 py-4 text-sm font-semibold text-heading lg:px-5">
                           {dimension}
                         </th>
-                        <td className="border-l border-white/10 bg-slate-950/70 px-4 py-4 text-sm leading-6 text-slate-300 lg:px-5">
+                        <td className="border-l border-border bg-surface px-4 py-4 text-sm leading-6 text-body lg:px-5">
                           {careVizor}
                         </td>
-                        <td className="border-l border-sky-300/15 bg-sky-400/[0.06] px-4 py-4 text-sm leading-6 text-slate-200 lg:px-5">
+                        <td className="border-l border-ai-border bg-ai-surface px-4 py-4 text-sm leading-6 text-body lg:px-5">
                           {topCloserR}
                         </td>
                       </tr>
@@ -1290,11 +1290,11 @@ export default function Home() {
                 </table>
               </div>
 
-              <div className="mt-8 rounded-xl border border-sky-300/25 bg-slate-950/80 p-6 sm:p-7">
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+              <div className="mt-8 rounded-xl border border-ai-border bg-surface p-6 sm:p-7">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                   What stays human
                 </p>
-                <p className="mt-4 text-base leading-7 text-white sm:text-lg">
+                <p className="mt-4 text-base leading-7 text-heading sm:text-lg">
                   deciding what the product should be, who it serves, what a fair
                   rule looks like for everyone on the platform, and when the AI
                   is confidently wrong. Those calls don&apos;t get delegated.
@@ -1303,7 +1303,7 @@ export default function Home() {
             </div>
           </details>
 
-          <p className="mt-10 border-l-2 border-sky-300/60 pl-6 text-xl font-medium leading-8 text-white sm:text-2xl sm:leading-9">
+          <p className="mt-10 border-l-2 border-ai-border pl-6 text-xl font-medium leading-8 text-heading sm:text-2xl sm:leading-9">
             I keep building because the fastest way to understand a technology
             is to be accountable for it in production. Everything above this
             section is what I&apos;ve delivered for employers. This section is what
@@ -1316,10 +1316,10 @@ export default function Home() {
 
       <section
         id="constant"
-        className="scroll-mt-20 border-b border-white/10 bg-slate-950 px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
+        className="scroll-mt-20 border-b border-border bg-surface px-6 py-24 lg:scroll-mt-8 lg:pl-24 lg:pr-8"
       >
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
             The constant
           </p>
 
@@ -1327,89 +1327,89 @@ export default function Home() {
             The work changes. The accountability does not.
           </h2>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted">
             Across every altitude, AI increases speed, scale, and reach. The
             human responsibility rises with the stakes.
           </p>
 
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:items-end">
-            <article className="border-t border-sky-300/25 bg-slate-900/50 p-5 md:min-h-44">
-              <p className="text-xs text-sky-300">01</p>
-              <h3 className="mt-4 text-lg font-semibold text-white">
+            <article className="border-t border-border bg-surface p-5 md:min-h-44">
+              <p className="text-xs text-primary">01</p>
+              <h3 className="mt-4 text-lg font-semibold text-heading">
                 Define what is real
               </h3>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
+              <p className="mt-3 text-sm leading-6 text-muted">
                 Decide which requirements actually matter.
               </p>
             </article>
 
-            <article className="border-t border-sky-300/35 bg-slate-900/60 p-5 md:min-h-48">
-              <p className="text-xs text-sky-300">02</p>
-              <h3 className="mt-4 text-lg font-semibold text-white">
+            <article className="border-t border-ai-border bg-section p-5 md:min-h-48">
+              <p className="text-xs text-primary">02</p>
+              <h3 className="mt-4 text-lg font-semibold text-heading">
                 Own the commitment
               </h3>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
+              <p className="mt-3 text-sm leading-6 text-muted">
                 Escalate, absorb, and hold the line on scope.
               </p>
             </article>
 
-            <article className="border-t border-sky-300/45 bg-slate-900/70 p-5 md:min-h-52">
-              <p className="text-xs text-sky-300">03</p>
-              <h3 className="mt-4 text-lg font-semibold text-white">
+            <article className="border-t-2 border-primary/60 bg-ai-surface p-5 md:min-h-52">
+              <p className="text-xs text-primary">03</p>
+              <h3 className="mt-4 text-lg font-semibold text-heading">
                 Coordinate the people
               </h3>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
+              <p className="mt-3 text-sm leading-6 text-muted">
                 Align competing owners around the outcome.
               </p>
             </article>
 
-            <article className="border-t border-sky-300/60 bg-slate-900/80 p-5 md:min-h-56">
-              <p className="text-xs text-sky-300">04</p>
-              <h3 className="mt-4 text-lg font-semibold text-white">
+            <article className="border-t-2 border-primary bg-primary/10 p-5 md:min-h-56">
+              <p className="text-xs text-primary">04</p>
+              <h3 className="mt-4 text-lg font-semibold text-heading">
                 Stand behind the investment call
               </h3>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
+              <p className="mt-3 text-sm leading-6 text-muted">
                 Choose where finite capital and capacity go.
               </p>
             </article>
           </div>
 
-          <div className="mt-8 border-t border-dashed border-sky-300/30 pt-8">
-            <article className="grid gap-5 rounded-2xl border border-sky-300/25 bg-sky-400/[0.06] p-7 sm:p-9 md:grid-cols-[auto_1fr] md:items-center md:gap-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-sky-300/40 text-sm font-medium text-sky-300">
+          <div className="mt-8 border-t border-dashed border-ai-border pt-8">
+            <article className="grid gap-5 rounded-2xl border border-ai-border bg-ai-surface p-7 sm:p-9 md:grid-cols-[auto_1fr] md:items-center md:gap-8">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-ai-border text-sm font-medium text-primary">
                 All 4
               </div>
 
               <div>
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
                   Founder application
                 </p>
-                <h3 className="mt-3 text-2xl font-semibold text-white">
+                <h3 className="mt-3 text-2xl font-semibold text-heading">
                   Own the whole venture
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-300">
+                <p className="mt-3 text-sm leading-6 text-body">
                   Decide what should be built and why.
                 </p>
               </div>
             </article>
           </div>
 
-          <p className="mt-10 max-w-4xl text-lg leading-8 text-slate-300">
+          <p className="mt-10 max-w-4xl text-lg leading-8 text-body">
             Integrity shows up in the costly call: the honest recommendation,
             the hard escalation, and standing behind a decision when it is
             under fire.
           </p>
 
-          <p className="mt-8 border-l-2 border-sky-300/60 pl-6 text-2xl font-medium leading-9 text-white sm:text-3xl sm:leading-10">
+          <p className="mt-8 border-l-2 border-ai-border pl-6 text-2xl font-medium leading-9 text-heading sm:text-3xl sm:leading-10">
             AI multiplies the work. It does not inherit the judgment or the
             accountability.
           </p>
         </div>
       </section>
 
-      <div className="border-b border-white/10 bg-slate-950 px-6 py-12 lg:pl-24 lg:pr-8">
-        <div className="mx-auto max-w-7xl rounded-2xl border border-sky-300/20 bg-sky-400/[0.04] p-7 sm:p-9">
-          <p className="max-w-4xl text-base leading-8 text-slate-200 sm:text-lg">
+      <div className="border-b border-border bg-surface px-6 py-12 lg:pl-24 lg:pr-8">
+        <div className="mx-auto max-w-7xl rounded-2xl border border-ai-border bg-ai-surface p-7 sm:p-9">
+          <p className="max-w-4xl text-base leading-8 text-body sm:text-lg">
             The judgment you&apos;ve seen throughout this site doesn&apos;t come
             from a management framework; it comes from convictions. My faith
             is the root they grow from. It&apos;s why I see resources as
@@ -1425,11 +1425,11 @@ export default function Home() {
 
       <section
         id="contact"
-        className="scroll-mt-20 border-t border-white/10 bg-slate-900/60 px-6 py-24 lg:scroll-mt-8 lg:px-8"
+        className="scroll-mt-20 border-t border-border bg-section px-6 py-24 lg:scroll-mt-8 lg:px-8"
       >
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
               Contact
             </p>
 
@@ -1437,13 +1437,13 @@ export default function Home() {
               Start a conversation.
             </h2>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
               Whether the need is understanding the problem, delivering the
               work, coordinating at scale, allocating investment, or building
               something new, start with the challenge in front of you.
             </p>
 
-            <p className="mt-8 max-w-xl border-l-2 border-sky-300/50 pl-5 text-sm leading-6 text-slate-300">
+            <p className="mt-8 max-w-xl border-l-2 border-ai-border pl-5 text-sm leading-6 text-body">
               Submissions will notify me by email so I can respond promptly.
             </p>
           </div>
@@ -1453,8 +1453,8 @@ export default function Home() {
       </section>
       </div>
 
-      <footer className="border-t border-white/10 px-6 py-8 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <footer className="border-t border-border px-6 py-8 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Badou Franck</p>
           <p>Technology delivery leadership, multiplied by AI.</p>
         </div>
