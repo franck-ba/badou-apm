@@ -473,106 +473,6 @@ function PortfolioManagerVisual() {
   );
 }
 
-function FounderVisual() {
-  const stages = [
-    {
-      label: "CareVizor",
-      items: [
-        "Product strategy",
-        "Requirements",
-        "Vendor coordination",
-        "Roadmap",
-        "Budget",
-        "Launch",
-      ],
-    },
-    {
-      label: "AI multiplier",
-      items: ["Synthesis", "Drafting", "Coordination", "Analysis"],
-    },
-    {
-      label: "TopCloserR",
-      items: [
-        "Product strategy",
-        "Architecture",
-        "The build",
-        "Source control",
-        "Operational analytics",
-      ],
-    },
-  ];
-
-  const comparison = [
-    {
-      label: "Then",
-      detail: "One founder directing a small team",
-    },
-    {
-      label: "Now",
-      detail: "One founder directing AI across the operation",
-    },
-    {
-      label: "Constant",
-      detail: "Vision, judgment, and accountability",
-    },
-  ];
-
-  return (
-    <div className="mt-12 overflow-hidden rounded-2xl border border-sky-300/30 bg-slate-950/80">
-      <div className="grid gap-3 p-4 sm:p-5 xl:grid-cols-[1fr_auto_1fr_auto_1fr] xl:items-stretch">
-        {stages.map((stage, index) => (
-          <div key={stage.label} className="contents">
-            <div className="rounded-xl border border-sky-300/15 bg-slate-900/70 p-5">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-                {stage.label}
-              </p>
-              <ul className="mt-4 space-y-2 text-sm leading-5 text-slate-300">
-                {stage.items.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="text-sky-300" aria-hidden="true">
-                      •
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {index < stages.length - 1 && (
-              <div
-                className="hidden items-center justify-center px-1 text-sky-300 lg:flex"
-                aria-hidden="true"
-              >
-                →
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div className="grid border-t border-sky-300/25 sm:grid-cols-3">
-        {comparison.map((item, index) => (
-          <div
-            key={item.label}
-            className={`p-4 sm:p-5 ${
-              index > 0
-                ? "border-t border-white/10 sm:border-l sm:border-t-0"
-                : ""
-            }`}
-          >
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-              {item.label}
-            </p>
-            <p className="mt-2 text-sm leading-5 text-slate-200">
-              {item.detail}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -1195,100 +1095,222 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="border-l-2 border-sky-300/50 pl-5 sm:pl-7">
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-sky-300">
-              Founder capstone
+              The Proving Ground
             </p>
 
-            <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-              Building the whole thing.
-            </h2>
+            <p className="mt-4 max-w-3xl text-xl italic leading-8 text-white sm:text-2xl">
+              Where I learn the technology I lead — by shipping it.
+            </p>
 
             <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">
-              The four roles show how I operate across increasing levels of
-              accountability. The founder story shows what happens when I apply
-              that full range to something I am building myself.
-            </p>
-
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-400">
-              A separate movement after the climb, not a fifth rung, but all
-              four altitudes operating at once.
+              For twenty years I&apos;ve led delivery from the analyst&apos;s seat up
+              to the portfolio. But leading technology and understanding it
+              from the inside are different things, and I&apos;ve never been willing
+              to let the gap grow. So I build real products, for real users,
+              alongside my career. They&apos;re not side hobbies and they&apos;re not an
+              exit plan. They&apos;re how I stay current — and both of them started
+              at my own kitchen table.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <article className="rounded-2xl border border-white/10 bg-slate-950/70 p-7 sm:p-9">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                Pre-AI build
-              </p>
+          <details className="group mt-12 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/70">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-7 text-xl font-semibold text-white marker:hidden sm:p-9 sm:text-2xl">
+              Origin Story
+              <span
+                className="text-sky-300 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                aria-hidden="true"
+              >
+                ↓
+              </span>
+            </summary>
 
-              <h3 className="mt-3 text-3xl font-semibold text-white">
-                CareVizor
+            <div className="space-y-6 border-t border-white/10 px-7 pb-7 pt-6 text-base leading-7 text-slate-300 sm:px-9 sm:pb-9">
+              <h3 className="text-lg font-semibold leading-7 text-white">
+                It started with one recruiter running an agency on Gmail,
+                Google Sheets, and a cell phone.
               </h3>
-
-              <p className="mt-5 text-base leading-7 text-slate-300">
-                A digital childcare marketplace founded and taken from concept
-                to market. Badou owned the whole arc alone at the helm: product
-                strategy, requirements and specifications, vendor and developer
-                coordination, roadmap, budget, and launch.
+              <p>
+                My wife owns a solo recruiting agency. For years it ran the way
+                most solo agencies do: candidates in a spreadsheet, follow-ups
+                in an inbox, and everything else in her head. I did what a
+                business analyst does — sat with the workflow, mapped where time
+                was leaking, and researched what a one-person shop could actually
+                sustain. Then I built it: a CRM on GoHighLevel, a website, social
+                presence, and analytics so she could see what was working.
               </p>
-
-              <p className="mt-6 border-t border-white/10 pt-6 text-sm leading-7 text-slate-400">
-                Every function that AI now accelerates (synthesis, drafting,
-                coordination, and analysis) was done by hand, by one founder
-                directing a small team.
+              <p>
+                That became TalentRApp — done-for-you CRM, automation, and
+                technology infrastructure for recruiting agencies who don&apos;t
+                have a technology department because they are the department.
               </p>
-            </article>
-
-            <article className="rounded-2xl border border-sky-300/25 bg-sky-400/[0.06] p-7 sm:p-9">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-                AI-multiplied build
-              </p>
-
-              <h3 className="mt-3 text-3xl font-semibold text-white">
-                TopCloserR
+              <h3 className="pt-2 text-lg font-semibold leading-7 text-white">
+                Then she changed roles, and I got a second problem to solve.
               </h3>
-
-              <p className="mt-5 text-base leading-7 text-slate-200">
-                A live multi-sided marketplace, materially more ambitious in
-                scope and architecture than what one founder could reasonably
-                have shipped solo a decade earlier. As a solo founder, Badou
-                now directs product strategy, architecture, the build, source
-                control, and operational analytics through AI.
+              <p>
+                She started working as a closer — selling for early-stage
+                startups on commission. Watching her research the role, I saw a
+                community with real demand and no home: closers looking for
+                reputable companies, companies looking for proven closers, and
+                no marketplace connecting them with any rigor.
               </p>
-
-              <p className="mt-6 border-t border-sky-300/15 pt-6 text-sm leading-7 text-slate-300">
-                The same founder instinct, now multiplied: Badou&apos;s delivery
-                understanding now reaches the implementation layer through
-                end-to-end technical direction, deepening the portfolio-level
-                altitude established by the four-role climb rather than lowering
-                it. A decade later, AI multiplies what one founder can build.
+              <p>
+                That became TopCloserR — an AI-multiplied, multi-sided sales
+                marketplace. It&apos;s also where I do my most hands-on technical
+                work: directing a Next.js and Supabase build through Claude Code,
+                running n8n automations, and designing, testing, and managing the
+                AI agents that make a solo-operated platform behave like a
+                staffed one.
               </p>
+            </div>
+          </details>
 
-              <p className="mt-6 border-l-2 border-sky-300/50 pl-5 text-sm leading-7 text-slate-200">
-                I build platforms where the people they serve have a path to
-                earn and advance.
-              </p>
-            </article>
-          </div>
+          <details className="group mt-6 overflow-hidden rounded-2xl border border-sky-300/25 bg-sky-400/[0.06]">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-7 text-xl font-semibold text-white marker:hidden sm:p-9 sm:text-2xl">
+              Pre-AI vs. AI-Multiplied Comparison
+              <span
+                className="text-sky-300 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                aria-hidden="true"
+              >
+                ↓
+              </span>
+            </summary>
 
-          <p className="mt-8 text-center text-xl font-medium text-white sm:text-2xl">
-            Same founder instinct. Different era. Dramatically different
-            leverage.
+            <div className="border-t border-sky-300/15 px-4 pb-7 pt-6 sm:px-7 sm:pb-9 lg:px-9">
+              <div className="space-y-4 sm:hidden">
+                {[
+                  [
+                    "The build",
+                    "Hired developers and marketers; I wrote the specs and managed the sprints",
+                    "Direct development through Claude Code; I set direction, review every change, and never hand-write the code",
+                  ],
+                  [
+                    "The team",
+                    "Multi-disciplinary human team",
+                    "One founder, an offshore content team, and a roster of AI agents I design and supervise",
+                  ],
+                  [
+                    "Requirements",
+                    "Business requirements documents and functional specs, written by hand",
+                    "Jobs-to-be-done translated into acceptance criteria and GitHub issues with AI drafting the first pass",
+                  ],
+                  [
+                    "Speed to change",
+                    "Weeks per iteration",
+                    "Hours per iteration",
+                  ],
+                  [
+                    "What I learned",
+                    "How to ship a marketplace from concept to market",
+                    "How to run a company where the operating layer is AI and the judgment layer is me",
+                  ],
+                ].map(([dimension, careVizor, topCloserR]) => (
+                  <article
+                    key={dimension}
+                    className="overflow-hidden rounded-xl border border-white/10 bg-slate-950/70"
+                  >
+                    <h3 className="border-b border-white/10 px-5 py-4 font-semibold text-white">
+                      {dimension}
+                    </h3>
+                    <div className="space-y-2 px-5 py-4">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+                        CareVizor (2014–2016)
+                      </p>
+                      <p className="text-sm leading-6 text-slate-300">
+                        {careVizor}
+                      </p>
+                    </div>
+                    <div className="space-y-2 border-t border-sky-300/15 bg-sky-400/[0.06] px-5 py-4">
+                      <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                        TopCloserR (2025–present)
+                      </p>
+                      <p className="text-sm leading-6 text-slate-200">
+                        {topCloserR}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="hidden overflow-hidden rounded-xl border border-white/10 sm:block">
+                <table className="w-full table-fixed border-collapse text-left">
+                  <thead className="bg-slate-950/80">
+                    <tr>
+                      <th className="w-1/5 px-4 py-4 text-sm font-semibold text-white lg:px-5">
+                        Dimension
+                      </th>
+                      <th className="w-2/5 border-l border-white/10 px-4 py-4 text-sm font-semibold text-white lg:px-5">
+                        CareVizor (2014–2016)
+                      </th>
+                      <th className="w-2/5 border-l border-sky-300/15 bg-sky-400/[0.06] px-4 py-4 text-sm font-semibold text-sky-300 lg:px-5">
+                        TopCloserR (2025–present)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/10">
+                    {[
+                      [
+                        "The build",
+                        "Hired developers and marketers; I wrote the specs and managed the sprints",
+                        "Direct development through Claude Code; I set direction, review every change, and never hand-write the code",
+                      ],
+                      [
+                        "The team",
+                        "Multi-disciplinary human team",
+                        "One founder, an offshore content team, and a roster of AI agents I design and supervise",
+                      ],
+                      [
+                        "Requirements",
+                        "Business requirements documents and functional specs, written by hand",
+                        "Jobs-to-be-done translated into acceptance criteria and GitHub issues with AI drafting the first pass",
+                      ],
+                      [
+                        "Speed to change",
+                        "Weeks per iteration",
+                        "Hours per iteration",
+                      ],
+                      [
+                        "What I learned",
+                        "How to ship a marketplace from concept to market",
+                        "How to run a company where the operating layer is AI and the judgment layer is me",
+                      ],
+                    ].map(([dimension, careVizor, topCloserR]) => (
+                      <tr key={dimension} className="align-top">
+                        <th className="bg-slate-950/70 px-4 py-4 text-sm font-semibold text-white lg:px-5">
+                          {dimension}
+                        </th>
+                        <td className="border-l border-white/10 bg-slate-950/70 px-4 py-4 text-sm leading-6 text-slate-300 lg:px-5">
+                          {careVizor}
+                        </td>
+                        <td className="border-l border-sky-300/15 bg-sky-400/[0.06] px-4 py-4 text-sm leading-6 text-slate-200 lg:px-5">
+                          {topCloserR}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="mt-8 rounded-xl border border-sky-300/25 bg-slate-950/80 p-6 sm:p-7">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
+                  What stays human
+                </p>
+                <p className="mt-4 text-base leading-7 text-white sm:text-lg">
+                  deciding what the product should be, who it serves, what a fair
+                  rule looks like for everyone on the platform, and when the AI
+                  is confidently wrong. Those calls don&apos;t get delegated.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <p className="mt-10 border-l-2 border-sky-300/60 pl-6 text-xl font-medium leading-8 text-white sm:text-2xl sm:leading-9">
+            I keep building because the fastest way to understand a technology
+            is to be accountable for it in production. Everything above this
+            section is what I&apos;ve delivered for employers. This section is what
+            I&apos;ve delivered for myself — and it&apos;s why I can walk into an AI
+            transformation conversation knowing exactly what the hard parts feel
+            like.
           </p>
-
-          <FounderVisual />
-
-          <div className="mt-12 rounded-2xl border border-sky-300/25 bg-slate-950/80 p-7 sm:p-9">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-300">
-              What stays human
-            </p>
-
-            <p className="mt-4 max-w-5xl text-xl leading-8 text-white sm:text-2xl">
-              The vision, the judgment about what to build and why, and the
-              accountability for the whole. AI multiplies a founder&apos;s
-              reach; it does not decide what the company should be. That call,
-              then and now, is Badou&apos;s.
-            </p>
-          </div>
         </div>
       </section>
 
