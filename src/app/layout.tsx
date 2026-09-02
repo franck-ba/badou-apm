@@ -5,9 +5,7 @@ import "./globals.css";
 const siteUrl = "https://badou-apm.com/";
 const title = "Badou Franck | Technology Delivery Leadership";
 const description =
-  "Badou Franck brings 20 years of technology delivery leadership across business analysis, project, program, and portfolio management, now multiplied by AI.";
-const socialDescription =
-  "20 years across business analysis, project, program, and portfolio leadership, now applied as a founder and multiplied by AI.";
+  "20 years across business analysis, project, program, and portfolio leadership — now kept current through hands-on, AI-multiplied product builds.";
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -46,7 +44,7 @@ export const metadata: Metadata = {
   creator: "Badou Franck",
   openGraph: {
     title,
-    description: socialDescription,
+    description,
     url: siteUrl,
     siteName: "Badou Franck",
     locale: "en_US",
@@ -63,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title,
-    description: socialDescription,
+    description,
     images: ["/opengraph-image"],
   },
   robots: {

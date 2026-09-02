@@ -29,7 +29,7 @@ Phase 1 is complete and live. The current production site includes:
 - A Project Manager showcase
 - A Program Manager showcase
 - A Portfolio Manager showcase
-- A separate Founder capstone comparing CareVizor and TopCloserR
+- A separate Proving Ground capstone comparing CareVizor and TopCloserR
 - “The Constant” judgment-through-line
 - Sticky desktop navigation
 - A mobile section selector
@@ -42,7 +42,7 @@ Phase 1 is complete and live. The current production site includes:
 - `sitemap.xml`
 - JSON-LD structured data
 
-> The Founder capstone is intentionally separate from the four-role climb and is not a fifth numbered role.
+> The Proving Ground capstone is intentionally separate from the four-role climb and is not a fifth numbered role.
 
 ## Technology Stack
 

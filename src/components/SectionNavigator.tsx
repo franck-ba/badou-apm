@@ -10,7 +10,11 @@ const roleSections = [
 ] as const;
 
 const closingSections = [
-  { id: "founder", label: "Founder", shortLabel: "Founder" },
+  {
+    id: "founder",
+    label: "Proving Ground",
+    shortLabel: "Proving Ground",
+  },
   { id: "constant", label: "What Stays Human", shortLabel: "Constant" },
   { id: "contact", label: "Contact", shortLabel: "Contact" },
 ] as const;

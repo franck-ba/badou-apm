@@ -516,7 +516,7 @@ export default function Home() {
               className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               href="#founder"
             >
-              Founder
+              Proving Ground
             </a>
             <a
               className="rounded-sm transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
@@ -557,8 +557,8 @@ export default function Home() {
 
         <p className="mt-6 max-w-3xl text-base leading-7 text-slate-400 sm:text-lg">
           I have operated across every altitude of technology delivery, from
-          understanding the problem to allocating enterprise investment, and now
-          apply that full range as a founder.
+          understanding the problem to allocating enterprise investment, and I
+          stay current by applying that full range in real product builds.
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -573,7 +573,7 @@ export default function Home() {
             href="#founder"
             className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white transition hover:border-white/40 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
-            See What I&apos;m Building
+            See the Proving Ground
           </a>
         </div>
 

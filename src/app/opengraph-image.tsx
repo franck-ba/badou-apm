@@ -66,7 +66,7 @@ export default function OpenGraphImage() {
               padding: "9px 15px",
             }}
           >
-            Founder · Applying the full range
+            Proving Ground · Applying the full range
           </div>
         </div>
 
