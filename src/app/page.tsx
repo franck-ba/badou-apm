@@ -24,6 +24,13 @@ const businessAnalystActivities = [
     aiMultiplied:
       "AI drafts current- and future-state process maps from interview transcripts and existing documentation, quantifies the improvement opportunity, and generates the options analysis for stakeholder review.",
   },
+  {
+    title: "User Stories & Backlog Readiness",
+    preAi:
+      "Decompose each approved requirement into user stories by hand, write acceptance criteria one story at a time, size them with the team, and keep the story map and the BRD in sync manually as scope moved.",
+    aiMultiplied:
+      "AI drafts the story set and first-pass acceptance criteria straight from the approved requirements, flags stories that are too large or untestable, and regenerates the story map when a requirement changes. I decide which stories are real and which are noise.",
+  },
 ];
 
 const projectManagerActivities = [
@@ -55,6 +62,13 @@ const projectManagerActivities = [
     aiMultiplied:
       "AI drafts test coverage from requirements, clusters and de-duplicates defect reports across distributed teams, summarizes overnight offshore progress for the morning handoff, and flags coverage gaps before a release, so the lead manages exceptions, not spreadsheets.",
   },
+  {
+    title: "Backlog Grooming & Sprint Planning",
+    preAi:
+      "Weekly grooming sessions, manual prioritization against a spreadsheet of stakeholder asks, velocity tracked by hand, sprint scope negotiated line by line.",
+    aiMultiplied:
+      "AI pre-ranks the backlog against stated priorities and dependencies, drafts the sprint proposal, and surfaces the conflicts before the meeting. The meeting shrinks to the decisions only.",
+  },
 ];
 
 const programManagerActivities = [
@@ -79,6 +93,13 @@ const programManagerActivities = [
     aiMultiplied:
       "AI prepares the trade-off analysis and scenario comparisons before the session, captures decisions in real time, and drafts the cascade of updates to each impacted project.",
   },
+  {
+    title: "Cross-Team Backlog Sequencing",
+    preAi:
+      "Reconcile 30–40 project backlogs into a single program sequence by hand, chase dependency owners, rebuild the plan every time one team slipped.",
+    aiMultiplied:
+      "AI holds the dependency graph, re-sequences when a slip is logged, and drafts the impact note to affected leads. I own the trade-off call when two teams can’t both be first.",
+  },
 ];
 
 const portfolioManagerActivities = [
@@ -102,6 +123,13 @@ const portfolioManagerActivities = [
       "Consolidate portfolio performance, build the C-suite deck, translate delivery data into investment language, and prepare for the hard questions by hand.",
     aiMultiplied:
       "AI consolidates performance into the investment narrative, anticipates the C-suite’s likely questions and drafts the answers, and keeps the governance view current between meetings, not only for them.",
+  },
+  {
+    title: "Portfolio Roadmap Prioritization",
+    preAi:
+      "Build the investment scoring model in Excel, score every initiative, argue the ranking in steering committee, re-score after every budget change.",
+    aiMultiplied:
+      "AI scores initiatives against the framework, models the capacity and budget scenarios, and drafts the recommendation memo. The C-suite gets options with consequences; the recommendation is still mine.",
   },
 ];
 
@@ -605,6 +633,12 @@ export default function Home() {
           <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
             The same rigor, applied at increasing levels of consequence.
           </h2>
+
+          <p className="mt-6 max-w-4xl text-lg leading-8 text-body">
+            The artifact changed shape at every altitude — BRD, user story,
+            backlog, roadmap, portfolio — but the job never did: deciding what
+            gets built, for whom, and in what order.
+          </p>
         </div>
       </section>
 
@@ -651,6 +685,27 @@ export default function Home() {
                 <li>75% reduction in documentation cycle time</li>
                 <li>15% improvement in claims processing efficiency</li>
               </ul>
+            </div>
+
+            <div className="mt-8 rounded-xl border border-ai-border bg-ai-surface p-5">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+                IN PRODUCT TERMS
+              </p>
+              <p className="mt-4 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Product equivalent:
+                </span>{" "}
+                Discovery and requirements ownership — the “what and why”
+                before anything is built.
+              </p>
+              <p className="mt-3 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Artifacts owned:
+                </span>{" "}
+                BRDs and functional specs; user stories with acceptance criteria
+                as programs moved to Agile; requirements traceability; the BA
+                standards that cut documentation cycle time 75%.
+              </p>
             </div>
           </div>
 
@@ -764,6 +819,25 @@ export default function Home() {
                 <li>40% testing-efficiency gains</li>
               </ul>
             </div>
+
+            <div className="mt-8 rounded-xl border border-ai-border bg-ai-surface p-5">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+                IN PRODUCT TERMS
+              </p>
+              <p className="mt-4 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Product equivalent:
+                </span>{" "}
+                Sprint and release ownership for a single product line.
+              </p>
+              <p className="mt-3 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Artifacts owned:
+                </span>{" "}
+                prioritized project backlog in Jira; user stories groomed with
+                the BA and dev lead; sprint plans; release notes; RAID log.
+              </p>
+            </div>
           </div>
 
           <div className="mt-12 rounded-2xl border border-ai-border bg-surface p-7 sm:p-9">
@@ -871,6 +945,27 @@ export default function Home() {
                 <li>SVP-level governance and prioritization</li>
                 <li>Executive dashboards in Power BI and Smartsheet</li>
               </ul>
+            </div>
+
+            <div className="mt-8 rounded-xl border border-ai-border bg-ai-surface p-5">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+                IN PRODUCT TERMS
+              </p>
+              <p className="mt-4 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Product equivalent:
+                </span>{" "}
+                Backlog ownership across a program — sequencing 30–40
+                interdependent workstreams like a multi-team product roadmap.
+              </p>
+              <p className="mt-3 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Artifacts owned:
+                </span>{" "}
+                program-level backlog and dependency map; release train plan;
+                Power BI and Smartsheet dashboards reporting what shipped and
+                why to SVPs.
+              </p>
             </div>
 
             <p className="mt-8 border-l-2 border-ai-border pl-5 text-sm leading-6 text-body">
@@ -984,6 +1079,28 @@ export default function Home() {
                 <li>Governance enhancements that cut project delays by 25%</li>
                 <li>Influenced multi-million-dollar C-suite decisions</li>
               </ul>
+            </div>
+
+            <div className="mt-8 rounded-xl border border-ai-border bg-ai-surface p-5">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+                IN PRODUCT TERMS
+              </p>
+              <p className="mt-4 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Product equivalent:
+                </span>{" "}
+                Product-portfolio strategy — deciding what gets funded,
+                sequenced, paused, and killed across a $2M+ portfolio.
+              </p>
+              <p className="mt-3 text-sm leading-6 text-body">
+                <span className="font-semibold text-heading">
+                  Artifacts owned:
+                </span>{" "}
+                investment cases; prioritization framework; capacity plan;
+                C-suite recommendations; from 2023, the enterprise AI delivery
+                backlog (email summarization, contract and legal document search,
+                bi-weekly AI enablement training).
+              </p>
             </div>
 
             <p className="mt-8 border-l-2 border-ai-border pl-5 text-sm leading-6 text-body">
@@ -1110,6 +1227,27 @@ export default function Home() {
               alongside my career. They&apos;re not side hobbies and they&apos;re not an
               exit plan. They&apos;re how I stay current — and both of them started
               at my own kitchen table.
+            </p>
+          </div>
+
+          <div className="mt-8 max-w-4xl rounded-xl border border-primary bg-surface p-5 sm:p-6">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+              IN PRODUCT TERMS
+            </p>
+            <p className="mt-4 text-sm leading-6 text-body sm:text-base">
+              <span className="font-semibold text-heading">
+                Product equivalent:
+              </span>{" "}
+              All of it, held by one person. I write the user stories and
+              acceptance criteria, own the GitHub backlog directly, and
+              prioritize it against revenue and funding.
+            </p>
+            <p className="mt-3 text-sm leading-6 text-body sm:text-base">
+              <span className="font-semibold text-heading">
+                Artifacts owned:
+              </span>{" "}
+              jobs-to-be-done → validated workflows → GitHub issues, with AI
+              drafting the first pass and me making the call.
             </p>
           </div>
 
