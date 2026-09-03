@@ -77,7 +77,7 @@ python3.12 -m venv .venv-pdf
 .venv-pdf/bin/python scripts/generate-execution-examples.py
 ```
 
-The generator writes `public/execution-examples.pdf`. PDF generation is intentionally separate from the website build.
+The generator writes `public/case-studies/public/how-i-deliver.pdf`. PDF generation is intentionally separate from the website build.
 
 ## Deployment and Operations
 

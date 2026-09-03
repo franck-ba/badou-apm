@@ -1,6 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import RoleDisclosure from "@/components/RoleDisclosure";
 import SectionNavigator from "@/components/SectionNavigator";
+import Link from "next/link";
 
 const businessAnalystActivities = [
   {
@@ -531,15 +532,12 @@ export default function Home() {
             >
               How I Deliver
             </a>
-            <a
+            <Link
               className="rounded-sm border-b border-ai-border pb-1 font-medium text-primary transition hover:border-primary hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
-              href="/execution-examples.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/case-studies"
             >
-              Execution Examples <span aria-hidden="true">↗</span>
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
+              Case Studies
+            </Link>
             <a
               className="rounded-sm transition hover:text-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
               href="#founder"
@@ -1189,15 +1187,12 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-5">
-            <a
-              href="/execution-examples.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/case-studies/how-i-deliver"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
             >
-              View Detailed Execution Examples
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
+              View Case Study
+            </Link>
             <span className="text-sm font-medium text-muted">
               PDF · 6 pages
             </span>

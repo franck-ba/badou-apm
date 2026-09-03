@@ -22,7 +22,7 @@ from weasyprint import HTML
 EXPECTED_WEASYPRINT_VERSION = "69.0"
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs" / "execution-examples" / "index.html"
-OUTPUT = ROOT / "public" / "execution-examples.pdf"
+OUTPUT = ROOT / "public" / "case-studies" / "public" / "how-i-deliver.pdf"
 
 
 def main() -> int:
