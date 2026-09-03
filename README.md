@@ -66,6 +66,19 @@ npm run dev
 
 The development server is available at [http://localhost:3000](http://localhost:3000).
 
+## Execution Examples PDF
+
+The downloadable execution examples PDF is generated from `docs/execution-examples/index.html` and `docs/execution-examples/styles.css` with WeasyPrint 69.0. Regenerate it from the repository root with:
+
+```bash
+brew install python@3.12 pango libffi # macOS prerequisite
+python3.12 -m venv .venv-pdf
+.venv-pdf/bin/pip install 'weasyprint==69.0'
+.venv-pdf/bin/python scripts/generate-execution-examples.py
+```
+
+The generator writes `public/execution-examples.pdf`. PDF generation is intentionally separate from the website build.
+
 ## Deployment and Operations
 
 - **Production branch:** `main`

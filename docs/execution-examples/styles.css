@@ -1,0 +1,101 @@
+@page {
+  size: Letter portrait;
+  margin: 0.48in 0.65in 0.47in;
+  @bottom-left {
+    content: "Badou Franck · badou-apm.com";
+    color: #97a3b2;
+    font: 7.2pt Arial, Helvetica, sans-serif;
+  }
+  @bottom-center {
+    content: "How I Deliver — Detailed Execution Examples";
+    color: #97a3b2;
+    font: 7.2pt Arial, Helvetica, sans-serif;
+  }
+  @bottom-right {
+    content: counter(page);
+    color: #97a3b2;
+    font: 7.2pt Arial, Helvetica, sans-serif;
+  }
+}
+
+:root {
+  --navy: #10253b;
+  --navy-panel: #214767;
+  --copper: #b46926;
+  --text: #354355;
+  --muted: #667384;
+  --quiet: #97a3b2;
+  --line: #dce2e8;
+  --panel: #f2f4f6;
+  --warm: #fbf7f2;
+}
+
+* { box-sizing: border-box; }
+html { font-family: Arial, Helvetica, sans-serif; color: var(--text); }
+body { margin: 0; font-size: 8.6pt; line-height: 1.36; }
+.page { break-after: page; }
+.page:last-child { break-after: auto; }
+p { margin: 0; }
+strong { color: var(--navy); }
+.eyebrow, .block-label, dt, .role-number, .compare-card h3 {
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.intro { padding-top: 0.12in; }
+.intro .eyebrow { color: var(--muted); font-size: 8.2pt; }
+.intro h1 { color: var(--navy); font-size: 27pt; line-height: 0.99; margin: 0.18in 0 0.2in; letter-spacing: -0.025em; }
+.lead { font-size: 11.2pt; line-height: 1.38; max-width: 7.2in; }
+.short-rule { width: 0.64in; border-top: 2px solid var(--navy-panel); margin: 0.2in 0 0.08in; }
+.profile { font-size: 9.3pt; line-height: 1.55; margin-bottom: 0.2in; }
+.intro-note { background: var(--panel); border-left: 2px solid var(--navy-panel); padding: 0.12in 0.17in; font-size: 8.1pt; margin-top: 0.11in; }
+.translation-thesis { color: var(--navy); font-weight: 700; font-size: 8.25pt; margin: 0.1in 0 0; padding-left: 0.17in; }
+.toc { margin-top: 0.19in; }
+.toc .eyebrow { color: var(--quiet); font-size: 7.5pt; margin-bottom: 0.01in; }
+.toc a { color: var(--muted); text-decoration: none; display: grid; grid-template-columns: 0.38in max-content 0.12in 1fr; gap: 0.05in; align-items: baseline; padding: 0.06in 0; border-bottom: 1px solid #e6eaee; font-size: 7.8pt; }
+.toc a strong { font-size: 8.3pt; }
+.toc-number { color: var(--copper); font-weight: 700; font-size: 8.3pt; }
+
+.role-page { padding-top: 0.03in; }
+.role-number { color: var(--copper); font-size: 9.5pt; margin-bottom: 0.11in; }
+.role-header h2 { color: var(--navy); font-size: 18.1pt; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 0.06in; }
+.role-subtitle { color: var(--muted); font-size: 9.4pt; font-style: italic; }
+.context { display: grid; margin: 0.12in 0; padding: 0.08in 0 0.09in; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.context-ba { grid-template-columns: 1.05fr 1.85fr 1.4fr; }
+.context-pm { grid-template-columns: 1.7fr 1.55fr 0.9fr; }
+.context-program { grid-template-columns: 0.65fr 1.45fr 2.3fr; }
+.context-portfolio { grid-template-columns: 1.25fr 1.75fr 1.35fr; }
+dt { color: var(--quiet); font-size: 6.6pt; margin-bottom: 0.04in; }
+dd { color: #263547; font-weight: 700; font-size: 7.8pt; margin: 0; }
+.narrative { font-size: 8.45pt; line-height: 1.42; margin-bottom: 0.1in; }
+.product-terms { background: #f5f7f9; border-left: 2px solid var(--copper); padding: 0.075in 0.11in; margin-bottom: 0.1in; font-size: 7.8pt; line-height: 1.35; }
+.product-terms > div:not(.block-label) { display: inline-block; vertical-align: top; width: 47.5%; }
+.product-terms > div:last-child { margin-left: 4%; }
+.block-label { color: var(--copper); font-size: 6.65pt; margin-bottom: 0.04in; }
+.comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1in; align-items: start; }
+.compare-card { border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
+.compare-card h3 { margin: 0; padding: 0.065in 0.09in; font-size: 6.8pt; }
+.pre-ai h3 { color: #4f5d6b; background: #e3e7eb; }
+.ai { background: #f8fafc; }
+.ai h3 { color: white; background: var(--navy-panel); }
+.compare-card ul { margin: 0; padding: 0.07in 0.1in 0.07in 0.22in; font-size: 8pt; line-height: 1.34; }
+.compare-card li { margin-bottom: 0.045in; }
+.compare-card li:last-child { margin-bottom: 0; }
+.compare-card li::marker { color: #9aa7b3; }
+.activity { display: grid; grid-template-columns: 0.8in 1fr 1fr; gap: 0.09in; background: #eef2f5; border: 1px solid var(--line); margin-top: 0.09in; padding: 0.075in 0.1in; font-size: 7.6pt; line-height: 1.33; }
+.activity-title { color: var(--navy); font-size: 7.6pt; font-weight: 700; align-self: center; }
+.activity span { display: block; color: var(--copper); font-size: 6.2pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.025in; }
+.outcome, .human { margin-top: 0.09in; padding: 0.075in 0.11in; font-size: 8pt; line-height: 1.35; }
+.outcome { background: var(--panel); }
+.human { background: var(--warm); border-left: 2px solid var(--copper); }
+
+.constant { padding-top: 0.35in; }
+.constant h2 { color: var(--navy); font-size: 18pt; margin: 0 0 0.2in; }
+.constant > p { font-size: 9.4pt; line-height: 1.55; max-width: 7.1in; }
+.constant-list { margin: 0.26in 0 0.22in; }
+.constant-list div { display: grid; grid-template-columns: 0.45in 1fr; border-bottom: 1px solid #e6eaee; padding: 0.1in 0; }
+.constant-list dt { color: var(--copper); font-size: 8pt; margin: 0; }
+.constant-list dd { color: var(--text); font-size: 8.8pt; font-weight: 400; }
+.product-closing { color: var(--copper); font-weight: 700; margin-bottom: 0.12in !important; }
+.final-line { color: var(--navy); font-weight: 700; }
