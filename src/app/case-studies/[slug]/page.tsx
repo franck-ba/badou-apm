@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import {
+  CaseStudyHomeLink,
+  CaseStudyPdfLink,
+  CaseStudyTracker,
+} from "@/components/CaseStudyAnalytics";
 import {
   caseStudies,
   getCaseStudy,
@@ -74,9 +78,15 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     notFound();
   }
 
+  const analyticsProps = {
+    slug: caseStudy.slug,
+    visibility: caseStudy.unlisted ? "unlisted" : "public",
+  } as const;
+
   return (
     <main id="main-content" className="flex-1 px-6 py-16 lg:px-8 lg:py-20">
       <article className="mx-auto max-w-7xl">
+        <CaseStudyTracker {...analyticsProps} />
         <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
           Case Study
         </p>
@@ -87,15 +97,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           {caseStudy.summary}
         </p>
 
-        <a
+        <CaseStudyPdfLink
+          {...analyticsProps}
           href={caseStudy.pdf}
-          target="_blank"
-          rel="noopener noreferrer"
           className="mt-8 inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
-        >
-          View PDF
-          <span className="sr-only"> (opens in a new tab)</span>
-        </a>
+        />
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-ai-border bg-surface shadow-sm shadow-heading/5">
           <div className="border-b border-border bg-ai-surface px-5 py-4 text-sm font-medium text-heading sm:px-6">
@@ -114,12 +120,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </div>
         </div>
 
-        <Link
-          href="/"
+        <CaseStudyHomeLink
+          {...analyticsProps}
           className="mt-10 inline-block rounded-sm font-medium text-primary underline decoration-ai-border underline-offset-4 transition hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-page"
-        >
-          See how I&apos;ve delivered at this level before.
-        </Link>
+        />
       </article>
     </main>
   );

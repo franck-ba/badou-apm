@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useRef, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 type FormValues = {
   name: string;
@@ -35,11 +36,21 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [submissionError, setSubmissionError] = useState("");
+  const hasStarted = useRef(false);
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const conversationTypeRef = useRef<HTMLSelectElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
   const consentRef = useRef<HTMLInputElement>(null);
+
+  function handleFormChange() {
+    if (hasStarted.current) {
+      return;
+    }
+
+    hasStarted.current = true;
+    trackEvent("contact_form_start");
+  }
 
   function validateForm() {
     const nextErrors: FormErrors = {};
@@ -112,6 +123,7 @@ export default function ContactForm() {
 
       setValues(initialValues);
       setSuccessMessage("Thank you. Your message has been sent.");
+      trackEvent("contact_form_submit");
     } catch {
       setSubmissionError(
         "Your message could not be sent. Please try again.",
@@ -124,6 +136,7 @@ export default function ContactForm() {
   return (
     <form
       className="rounded-2xl border border-border bg-surface p-6 shadow-sm shadow-heading/5 sm:p-8"
+      onChange={handleFormChange}
       onSubmit={handleSubmit}
       noValidate
     >

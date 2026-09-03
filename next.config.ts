@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
       {
         source: "/for/credit-acceptance",
         destination:
-          "/case-studies/credit-acceptance-caps-dealer-yield-program",
+          "/case-studies/credit-acceptance-caps-dealer-yield-program?utm_source=credit-acceptance&utm_medium=direct-outreach&utm_campaign=senior-product-manager",
         permanent: false,
       },
     ];
