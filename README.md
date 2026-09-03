@@ -50,7 +50,7 @@ Phase 1 is complete and live. The current production site includes:
 - TypeScript
 - Tailwind CSS
 - Vercel
-- Make
+- Formspree
 - Zoho Mail
 - No database
 - No authentication
@@ -65,6 +65,12 @@ npm run dev
 ```
 
 The development server is available at [http://localhost:3000](http://localhost:3000).
+
+The contact API requires this server-side environment variable locally and in Vercel:
+
+```bash
+FORMSPREE_CONTACT_ENDPOINT=
+```
 
 ## Execution Examples PDF
 
@@ -86,7 +92,7 @@ The generator writes `public/case-studies/public/how-i-deliver.pdf`. PDF generat
 - **Deployment:** Every push to `main` automatically deploys through Vercel
 - **DNS:** GoDaddy
 - **Email:** Zoho Mail Lite
-- **Automation:** Make
+- **Contact delivery:** Formspree
 - **Database:** None
 
 ## Project Information

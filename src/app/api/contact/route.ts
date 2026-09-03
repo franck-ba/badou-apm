@@ -1,5 +1,5 @@
 const MAX_BODY_BYTES = 32_000;
-const MAKE_TIMEOUT_MS = 10_000;
+const FORMSPREE_TIMEOUT_MS = 10_000;
 
 const fieldLimits = {
   name: 120,
@@ -130,25 +130,39 @@ export async function POST(request: Request) {
     return jsonError(parsed.error, 422);
   }
 
-  const webhookUrl = process.env.MAKE_CONTACT_WEBHOOK_URL;
+  const formspreeEndpoint = process.env.FORMSPREE_CONTACT_ENDPOINT;
 
-  if (!webhookUrl) {
+  if (!formspreeEndpoint) {
     return jsonError("Contact service is not configured.", 500);
   }
 
+  let formspreeUrl: URL;
+
   try {
-    new URL(webhookUrl);
+    formspreeUrl = new URL(formspreeEndpoint);
   } catch {
     return jsonError("Contact service is not configured.", 500);
   }
 
+  if (
+    formspreeUrl.protocol !== "https:" ||
+    formspreeUrl.hostname !== "formspree.io" ||
+    !/^\/f\/[^/]+\/?$/.test(formspreeUrl.pathname)
+  ) {
+    return jsonError("Contact service is not configured.", 500);
+  }
+
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), MAKE_TIMEOUT_MS);
+  const timeout = setTimeout(
+    () => controller.abort(),
+    FORMSPREE_TIMEOUT_MS,
+  );
 
   try {
-    const webhookResponse = await fetch(webhookUrl, {
+    const formspreeResponse = await fetch(formspreeUrl, {
       method: "POST",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -165,7 +179,14 @@ export async function POST(request: Request) {
       signal: controller.signal,
     });
 
-    if (!webhookResponse.ok) {
+    const formspreeResult = (await formspreeResponse
+      .json()
+      .catch(() => null)) as { next?: unknown } | null;
+
+    if (
+      !formspreeResponse.ok ||
+      typeof formspreeResult?.next !== "string"
+    ) {
       return jsonError("Contact service rejected the submission.", 502);
     }
 
